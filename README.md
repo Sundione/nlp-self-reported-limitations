@@ -1,6 +1,6 @@
 # NLP Self-Reported Limitations
 
-This repository is associated with an EMNLP 2026 Findings paper, titled **"What Limits Us? Analyzing Self-Reported Limitations in NLP Research"** `[TO FILL: paper / arXiv link]`, by Tawan Thaepprasit, Peeranuth Kehasukcharoen, Ding Wang, Remi Denton, Peerapon Vateekul, and Piyawat Lertvittayakumjorn.
+This repository is associated with an EMNLP 2026 Findings paper, titled **["What Limits Us? Analyzing Self-Reported Limitations in NLP Research"](https://arxiv.org/abs/2609.15191)**, by Tawan Thaepprasit, Peeranuth Kehasukcharoen, Ding Wang, Remi Denton, Peerapon Vateekul, and Piyawat Lertvittayakumjorn.
 
 ## Abstract
 
@@ -64,26 +64,18 @@ The codebook CSV checked into each `llm_coded_dataset` year folder is the **outp
 
 ## Citation
 
-If you use this dataset, please cite:
+If you use this dataset, please cite the arXiv preprint for now. This will be replaced with the official ACL Anthology `@inproceedings` entry (with `address`, `doi`, and `pages`) once the EMNLP 2026 Findings proceedings are published.
 
-```
-[TO FILL: BibTeX entry once the paper has a venue URL / DOI / pages]
-
-@inproceedings{thaepprasit-etal-2026-what,
-    title     = "What Limits Us? Analyzing Self-Reported Limitations in {NLP} Research",
-    author    = "Thaepprasit, Tawan  and
-                 Kehasukcharoen, Peeranuth  and
-                 Wang, Ding  and
-                 Denton, Remi  and
-                 Vateekul, Peerapon  and
-                 Lertvittayakumjorn, Piyawat",
-    booktitle = "Findings of the Association for Computational Linguistics: EMNLP 2026",
-    year      = "2026",
-    address   = "[TO FILL]",
-    publisher = "Association for Computational Linguistics",
-    url       = "[TO FILL]",
-    doi       = "[TO FILL]",
-    pages     = "[TO FILL]"
+```bibtex
+@misc{thaepprasit2026what,
+      title         = {What Limits Us? Analyzing Self-Reported Limitations in NLP Research},
+      author        = {Tawan Thaepprasit and Peeranuth Kehasukcharoen and Ding Wang and Remi Denton and Peerapon Vateekul and Piyawat Lertvittayakumjorn},
+      year          = {2026},
+      eprint        = {2609.15191},
+      archivePrefix = {arXiv},
+      primaryClass  = {cs.CL},
+      url           = {https://arxiv.org/abs/2609.15191},
+      note          = {Accepted to Findings of EMNLP 2026}
 }
 ```
 

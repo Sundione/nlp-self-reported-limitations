@@ -4,7 +4,7 @@
 
 The formatted, original version of this data card is available as [`data_card.pdf`](data_card.pdf). This file mirrors that PDF in Markdown.
 
-This dataset is associated with an EMNLP 2026 Findings paper, titled *"What Limits Us? Analyzing Self-Reported Limitations in NLP Research"* [TO FILL: paper link]. The dataset contains 150 papers sampled from the ACL Anthology published between 2020 and 2025. Each record holds the paper identifier, title, abstract, the verbatim Limitations section, and that section split into numbered sentences. Two layers of human qualitative codes are attached: codes drawn from an established codebook, and codes the annotators created where no existing code fitted the statement. It was built as a human reference standard for hybrid qualitative coding of limitation statements in NLP research. It is released together with the codebook the annotators used.
+This dataset is associated with an EMNLP 2026 Findings paper, titled *["What Limits Us? Analyzing Self-Reported Limitations in NLP Research"](https://arxiv.org/abs/2609.15191)*. The dataset contains 150 papers sampled from the ACL Anthology published between 2020 and 2025. Each record holds the paper identifier, title, abstract, the verbatim Limitations section, and that section split into numbered sentences. Two layers of human qualitative codes are attached: codes drawn from an established codebook, and codes the annotators created where no existing code fitted the statement. It was built as a human reference standard for hybrid qualitative coding of limitation statements in NLP research. It is released together with the codebook the annotators used.
 
 ## Dataset Team(s) / Contact / Authors
 
@@ -305,4 +305,4 @@ Assigning a code to a limitation statement is a judgement, not a measurement. Th
 
 ---
 
-Structure follows the [Data Cards Playbook](https://sites.research.google/datacardsplaybook/) by Google Research, licensed under CC BY-SA 4.0. `[TO FILL]` marks a field awaiting input.
+Structure follows the [Data Cards Playbook](https://sites.research.google/datacardsplaybook/) by Google Research, licensed under CC BY-SA 4.0.

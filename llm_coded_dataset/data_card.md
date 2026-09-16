@@ -4,7 +4,7 @@
 
 The formatted, original version of this data card is available as [`data_card.pdf`](data_card.pdf). This file mirrors that PDF in Markdown.
 
-This dataset is associated with an EMNLP 2026 Findings paper, titled *"What Limits Us? Analyzing Self-Reported Limitations in NLP Research"* [TO FILL: paper link]. The dataset contains qualitative codes assigned by a large language model to the Limitations sections of 16,047 papers from the ACL Anthology published between 2020 and 2025. Every code assignment is traced to the sentences that triggered it, with a character span into the Limitations section and a short justification written by the model. It is organised paper-first: the top level is the paper, and each record carries the codes assigned to it along with the evidence supporting each one. All labels are machine-generated; the dataset carries no human annotation and is intended for large-scale analysis of how limitation statements are reported, not as a reference standard. A companion dataset of 150 papers coded by four human annotators is released separately — see [`human_coded_dataset/`](../human_coded_dataset/).
+This dataset is associated with an EMNLP 2026 Findings paper, titled *["What Limits Us? Analyzing Self-Reported Limitations in NLP Research"](https://arxiv.org/abs/2609.15191)*. The dataset contains qualitative codes assigned by a large language model to the Limitations sections of 16,047 papers from the ACL Anthology published between 2020 and 2025. Every code assignment is traced to the sentences that triggered it, with a character span into the Limitations section and a short justification written by the model. It is organised paper-first: the top level is the paper, and each record carries the codes assigned to it along with the evidence supporting each one. All labels are machine-generated; the dataset carries no human annotation and is intended for large-scale analysis of how limitation statements are reported, not as a reference standard. A companion dataset of 150 papers coded by four human annotators is released separately — see [`human_coded_dataset/`](../human_coded_dataset/).
 
 ## Dataset Team(s) / Contact / Authors
 
@@ -359,4 +359,4 @@ The dataset holds 74 papers from 2020 and 84 from 2021, against 6,269 from 2025.
 
 ---
 
-Structure follows the [Data Cards Playbook](https://sites.research.google/datacardsplaybook/) by Google Research, licensed under CC BY-SA 4.0. `[TO FILL]` marks a field awaiting input.
+Structure follows the [Data Cards Playbook](https://sites.research.google/datacardsplaybook/) by Google Research, licensed under CC BY-SA 4.0.
