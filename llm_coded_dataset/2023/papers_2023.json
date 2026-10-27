@@ -38935,7 +38935,7 @@
     "paper_id": "2023.acl-long.406",
     "title": "ByGPT5: End-to-End Style-conditioned Poetry Generation with Token-free Language Models",
     "abstract": "State-of-the-art poetry generation systems are often complex. They either consist of task-specific model pipelines, incorporate prior knowledge in the form of manually created constraints, or both. In contrast, end-to-end models would not suffer from the overhead of having to model prior knowledge and could learn the nuances of poetry from data alone, reducing the degree of human supervision required. In this work, we investigate end-to-end poetry generation conditioned on styles such as rhyme, meter, and alliteration. We identify and address lack of training data and mismatching tokenization algorithms as possible limitations of past attempts. In particular, we successfully pre-train ByGPT5, a new token-free decoder-only language model, and fine-tune it on a large custom corpus of English and German quatrains annotated with our styles. We show that ByGPT5 outperforms other models such as mT5, ByT5, GPT-2 and ChatGPT, while also being more parameter efficient and performing favorably compared to humans. In addition, we analyze its runtime performance and demonstrate that it is not prone to memorization. We make our code, models, and datasets publicly available.",
-    "limitation": "A well-known shortcoming of transformers is the computational complexity in self-attention layers (Vaswani et al., 2017). Since the number of required calculations grows quadratically with the length of the input, transformers become prohibitively slow on very long sequences. An unfortunate side effect of processing inputs at the characterlevel is that internal sequences become much longer, so token-free transformers run into these efficiency problems much earlier than subword-based models. Figure 7 illustrates this problem by contrasting the runtime of all poetry generation systems when generating a single quatrain. Even ByGPT5 (small), the smallest model in terms of number of parameters (cf. Table 1) and the fastest token-free transformer, is only marginally faster than GPT-2 (medium), which is almost five times larger. Tay et al. (2022) propose a solution to this problem for transformer encoder blocks by applying a neural pooling operation over input embeddings before feeding them into the model, which could be extended to decoder blocks in future work. Alternatively, Libovický et al. (2022) propose a two-stage decoding architecture in which the transformer decoder operates on character blocks that an additional LSTM model (Hochreiter and Schmidhuber, 1997) decodes into individual characters.\n\nAnother shortcoming is that our poetry generation systems can only generate a single poetic form, i.e., quatrains. In general, poetry is a very diverse form of language and stanzas can be of arbitrary length, so this is a serious limitation. In future work, we thus plan to extend our implementation of style-conditioning to variable length poems. In particular, one could encode a rhyme scheme not as a single special token, but as an arbitrary series of letters indicating which verses rhyme with each other. Alternatively, our current systems could be used to generate longer stanzas through a sliding window approach, i.e., generating one verse at a time with the last three verse as context.\n\nLastly, QuaTrain is limited in that it consists of pseudo-quatrains, which are not real quatrains and often have missing contexts. Nonetheless, as can be seen in Appendix D, models trained on QuaTrain are still able to generate meaningful poetry. In future work, we plan to improve the quality of our dataset by obtaining real quatrains from additional sources such as the EighteenthCentury Poetry Archive (Huber, 2022).\n\nFurther, our human evaluation has limitations due to its relatively small scope. We only have a limited number of annotators and only consider a subset of all style combinations. Nevertheless, we have achieved moderately high to high agreement on all tasks, and we have an additional human evaluation of German poetry in Appendix B, which points to the same conclusion.",
+    "limitation": "A well-known shortcoming of transformers is the computational complexity in self-attention layers (Vaswani et al., 2017). Since the number of required calculations grows quadratically with the length of the input, transformers become prohibitively slow on very long sequences. An unfortunate side effect of processing inputs at the characterlevel is that internal sequences become much longer, so token-free transformers run into these efficiency problems much earlier than subword-based models. Figure 7 illustrates this problem by contrasting the runtime of all poetry generation systems when generating a single quatrain. Even ByGPT5 (small), the smallest model in terms of number of parameters (cf. Table 1) and the fastest token-free transformer, is only marginally faster than GPT-2 (medium), which is almost five times larger. Tay et al. (2022) propose a solution to this problem for transformer encoder blocks by applying a neural pooling operation over input embeddings before feeding them into the model, which could be extended to decoder blocks in future work. Alternatively, Libovický et al. (2022) propose a two-stage decoding architecture in which the transformer decoder operates on character blocks that an additional LSTM model (Hochreiter and Schmidhuber, 1997) decodes into individual characters.\n\nAnother shortcoming is that our poetry generation systems can only generate a single poetic form, i.e., quatrains. In general, poetry is a very diverse form of language and stanzas can be of arbitrary length, so this is a serious limitation. In future work, we thus plan to extend our implementation of style-conditioning to variable length poems. In particular, one could encode a rhyme scheme not as a single special token, but as an arbitrary series of letters indicating which verses rhyme with each other. Alternatively, our current systems could be used to generate longer stanzas through a sliding window approach, i.e., generating one verse at a time with the last three verse as context.\n\nFurther, our human evaluation has limitations due to its relatively small scope. We only have a limited number of annotators and only consider a subset of all style combinations. Nevertheless, we have achieved moderately high to high agreement on all tasks, and we have an additional human evaluation of German poetry in Appendix B, which points to the same conclusion.\n\nLastly, QuaTrain is limited in that it consists of pseudo-quatrains, which are not real quatrains and often have missing contexts. Nonetheless, as can be seen in Appendix D, models trained on QuaTrain are still able to generate meaningful poetry. In future work, we plan to improve the quality of our dataset by obtaining real quatrains from additional sources such as the EighteenthCentury Poetry Archive (Huber, 2022).",
     "segmented_text": {
       "2023.acl-long.406_s01": "A well-known shortcoming of transformers is the computational complexity in self-attention layers (Vaswani et al., 2017).",
       "2023.acl-long.406_s02": "Since the number of required calculations grows quadratically with the length of the input, transformers become prohibitively slow on very long sequences.",
@@ -38949,12 +38949,12 @@
       "2023.acl-long.406_s10": "In future work, we thus plan to extend our implementation of style-conditioning to variable length poems.",
       "2023.acl-long.406_s11": "In particular, one could encode a rhyme scheme not as a single special token, but as an arbitrary series of letters indicating which verses rhyme with each other.",
       "2023.acl-long.406_s12": "Alternatively, our current systems could be used to generate longer stanzas through a sliding window approach, i.e., generating one verse at a time with the last three verse as context.",
-      "2023.acl-long.406_s13": "Lastly, QuaTrain is limited in that it consists of pseudo-quatrains, which are not real quatrains and often have missing contexts.",
-      "2023.acl-long.406_s14": "Nonetheless, as can be seen in Appendix D, models trained on QuaTrain are still able to generate meaningful poetry.",
-      "2023.acl-long.406_s15": "In future work, we plan to improve the quality of our dataset by obtaining real quatrains from additional sources such as the EighteenthCentury Poetry Archive (Huber, 2022).",
-      "2023.acl-long.406_s16": "Further, our human evaluation has limitations due to its relatively small scope.",
-      "2023.acl-long.406_s17": "We only have a limited number of annotators and only consider a subset of all style combinations.",
-      "2023.acl-long.406_s18": "Nevertheless, we have achieved moderately high to high agreement on all tasks, and we have an additional human evaluation of German poetry in Appendix B, which points to the same conclusion."
+      "2023.acl-long.406_s13": "Further, our human evaluation has limitations due to its relatively small scope.",
+      "2023.acl-long.406_s14": "We only have a limited number of annotators and only consider a subset of all style combinations.",
+      "2023.acl-long.406_s15": "Nevertheless, we have achieved moderately high to high agreement on all tasks, and we have an additional human evaluation of German poetry in Appendix B, which points to the same conclusion.",
+      "2023.acl-long.406_s16": "Lastly, QuaTrain is limited in that it consists of pseudo-quatrains, which are not real quatrains and often have missing contexts.",
+      "2023.acl-long.406_s17": "Nonetheless, as can be seen in Appendix D, models trained on QuaTrain are still able to generate meaningful poetry.",
+      "2023.acl-long.406_s18": "In future work, we plan to improve the quality of our dataset by obtaining real quatrains from additional sources such as the EighteenthCentury Poetry Archive (Huber, 2022)."
     },
     "existing_code": [
       "High Time Consumption",
@@ -38988,10 +38988,10 @@
         "code_name": "Human Labor and Annotation Bottleneck",
         "evidence": [
           {
-            "segmented_id": "2023.acl-long.406_s17",
+            "segmented_id": "2023.acl-long.406_s14",
             "segmented": "We only have a limited number of annotators and only consider a subset of all style combinations.",
-            "highlight_start": 2519,
-            "highlight_end": 2562,
+            "highlight_start": 2097,
+            "highlight_end": 2140,
             "highlight_text": "We only have a limited number of annotators",
             "justification": "The sentence identifies a severe operational constraint where the evaluation suffers from a scarcity of human annotators."
           }
@@ -39001,10 +39001,10 @@
         "code_name": "Low Data Quality",
         "evidence": [
           {
-            "segmented_id": "2023.acl-long.406_s13",
+            "segmented_id": "2023.acl-long.406_s16",
             "segmented": "Lastly, QuaTrain is limited in that it consists of pseudo-quatrains, which are not real quatrains and often have missing contexts.",
-            "highlight_start": 2055,
-            "highlight_end": 2146,
+            "highlight_start": 2426,
+            "highlight_end": 2517,
             "highlight_text": "consists of pseudo-quatrains, which are not real quatrains and often have missing contexts.",
             "justification": "The sentence explicitly identifies a quality defect in the source data itself (pseudo-quatrains, missing contexts). This is a structural flaw in the dataset's composition."
           }
@@ -39088,10 +39088,10 @@
             "justification": "The authors propose a theoretical mitigation or potential improvement to be explored in the future."
           },
           {
-            "segmented_id": "2023.acl-long.406_s15",
+            "segmented_id": "2023.acl-long.406_s18",
             "segmented": "In future work, we plan to improve the quality of our dataset by obtaining real quatrains from additional sources such as the EighteenthCentury Poetry Archive (Huber, 2022).",
-            "highlight_start": 2263,
-            "highlight_end": 2376,
+            "highlight_start": 2634,
+            "highlight_end": 2747,
             "highlight_text": "In future work, we plan to improve the quality of our dataset by obtaining real quatrains from additional sources",
             "justification": "Explicit delegation of dataset improvement to future work."
           }
@@ -39114,18 +39114,18 @@
         "code_name": "Non-Limitation: Strong Reported Performance",
         "evidence": [
           {
-            "segmented_id": "2023.acl-long.406_s14",
+            "segmented_id": "2023.acl-long.406_s17",
             "segmented": "Nonetheless, as can be seen in Appendix D, models trained on QuaTrain are still able to generate meaningful poetry.",
-            "highlight_start": 2190,
-            "highlight_end": 2262,
+            "highlight_start": 2561,
+            "highlight_end": 2633,
             "highlight_text": "models trained on QuaTrain are still able to generate meaningful poetry.",
             "justification": "Despite the limitation, the authors explicitly claim empirical success and effectiveness of their model."
           },
           {
-            "segmented_id": "2023.acl-long.406_s18",
+            "segmented_id": "2023.acl-long.406_s15",
             "segmented": "Nevertheless, we have achieved moderately high to high agreement on all tasks, and we have an additional human evaluation of German poetry in Appendix B, which points to the same conclusion.",
-            "highlight_start": 2631,
-            "highlight_end": 2694,
+            "highlight_start": 2209,
+            "highlight_end": 2272,
             "highlight_text": "we have achieved moderately high to high agreement on all tasks",
             "justification": "The authors explicitly highlight the empirical success and reliability of their evaluation results."
           }
@@ -39161,18 +39161,18 @@
         "code_name": "Scope Limitation",
         "evidence": [
           {
-            "segmented_id": "2023.acl-long.406_s16",
+            "segmented_id": "2023.acl-long.406_s13",
             "segmented": "Further, our human evaluation has limitations due to its relatively small scope.",
-            "highlight_start": 2447,
-            "highlight_end": 2518,
+            "highlight_start": 2025,
+            "highlight_end": 2096,
             "highlight_text": "our human evaluation has limitations due to its relatively small scope.",
             "justification": "The authors explicitly declare a deliberate boundary regarding the scale of their human evaluation."
           },
           {
-            "segmented_id": "2023.acl-long.406_s17",
+            "segmented_id": "2023.acl-long.406_s14",
             "segmented": "We only have a limited number of annotators and only consider a subset of all style combinations.",
-            "highlight_start": 2567,
-            "highlight_end": 2616,
+            "highlight_start": 2145,
+            "highlight_end": 2194,
             "highlight_text": "only consider a subset of all style combinations.",
             "justification": "The authors state a deliberate exclusion in their evaluation setup, restricting the study to a specific subset."
           }
@@ -353839,14 +353839,14 @@
     "paper_id": "2023.findings-emnlp.1026",
     "title": "Does Listener Gaze in Face-to-Face Interaction Follow the Entropy Rate Constancy Principle: An Empirical Study",
     "abstract": "It is generally assumed that language (written and spoken) follows the entropy rate constancy (ERC) principle, which states that the information density of a text is constant over time. Recently, this has also been found for nonverbal gestures used in monologue, but it is still unclear whether the ERC principle also applies to listeners’ nonverbal signals. We focus on listeners’ gaze behaviour extracted from video-recorded conversations and trained a transformer-based neural sequence model to process the gaze data of the dialogues and compute its information density. We also compute the information density of the corresponding speech using a pre-trained language model. Our results show (1) that listeners’ gaze behaviour in dialogues roughly follows the ERC principle, as well as (2) a congruence between information density of speech and listeners’ gaze behaviour.",
-    "limitation": "One limitation of the study is that the dialogues are not very diverse in content and activity. They are all explanations of a specific board game.\n\nA third limitation concerns the alignment of utterances with gaze labels. Since German words can be very long (e.g. 'Tiefseeabenteuer', the name of the board game), the simplified assumption that all words have the same duration and align with the same number of gaze labels will cause some noise.\n\nA second limitation is that because we rely on video-based gaze information collection rather than dedicated eye-tracking hardware, the gaze data derived from Openface is sometimes sub-optimal the camera setup was not optimised for gaze and face tracking, as the camera shots were over the shoulder and thus slightly elevated, rather than at eye level - so the data may contain noise. This compromise was necessary to meet multiple analysis objectives and also to avoid disrupting the naturalness of the conversational setting (e.g., by using wearable eye-trackers).",
+    "limitation": "One limitation of the study is that the dialogues are not very diverse in content and activity. They are all explanations of a specific board game.\n\nA second limitation is that because we rely on video-based gaze information collection rather than dedicated eye-tracking hardware, the gaze data derived from Openface is sometimes sub-optimal the camera setup was not optimised for gaze and face tracking, as the camera shots were over the shoulder and thus slightly elevated, rather than at eye level - so the data may contain noise. This compromise was necessary to meet multiple analysis objectives and also to avoid disrupting the naturalness of the conversational setting (e.g., by using wearable eye-trackers).\n\nA third limitation concerns the alignment of utterances with gaze labels. Since German words can be very long (e.g. 'Tiefseeabenteuer', the name of the board game), the simplified assumption that all words have the same duration and align with the same number of gaze labels will cause some noise.",
     "segmented_text": {
       "2023.findings-emnlp.1026_s01": "One limitation of the study is that the dialogues are not very diverse in content and activity.",
       "2023.findings-emnlp.1026_s02": "They are all explanations of a specific board game.",
-      "2023.findings-emnlp.1026_s03": "A third limitation concerns the alignment of utterances with gaze labels.",
-      "2023.findings-emnlp.1026_s04": "Since German words can be very long (e.g. 'Tiefseeabenteuer', the name of the board game), the simplified assumption that all words have the same duration and align with the same number of gaze labels will cause some noise.",
-      "2023.findings-emnlp.1026_s05": "A second limitation is that because we rely on video-based gaze information collection rather than dedicated eye-tracking hardware, the gaze data derived from Openface is sometimes sub-optimal the camera setup was not optimised for gaze and face tracking, as the camera shots were over the shoulder and thus slightly elevated, rather than at eye level - so the data may contain noise.",
-      "2023.findings-emnlp.1026_s06": "This compromise was necessary to meet multiple analysis objectives and also to avoid disrupting the naturalness of the conversational setting (e.g., by using wearable eye-trackers)."
+      "2023.findings-emnlp.1026_s03": "A second limitation is that because we rely on video-based gaze information collection rather than dedicated eye-tracking hardware, the gaze data derived from Openface is sometimes sub-optimal the camera setup was not optimised for gaze and face tracking, as the camera shots were over the shoulder and thus slightly elevated, rather than at eye level - so the data may contain noise.",
+      "2023.findings-emnlp.1026_s04": "This compromise was necessary to meet multiple analysis objectives and also to avoid disrupting the naturalness of the conversational setting (e.g., by using wearable eye-trackers).",
+      "2023.findings-emnlp.1026_s05": "A third limitation concerns the alignment of utterances with gaze labels.",
+      "2023.findings-emnlp.1026_s06": "Since German words can be very long (e.g. 'Tiefseeabenteuer', the name of the board game), the simplified assumption that all words have the same duration and align with the same number of gaze labels will cause some noise."
     },
     "existing_code": [
       "Dataset Bias/Imbalance",
@@ -353881,10 +353881,10 @@
         "code_name": "Low Data Quality",
         "evidence": [
           {
-            "segmented_id": "2023.findings-emnlp.1026_s05",
+            "segmented_id": "2023.findings-emnlp.1026_s03",
             "segmented": "A second limitation is that because we rely on video-based gaze information collection rather than dedicated eye-tracking hardware, the gaze data derived from Openface is sometimes sub-optimal the camera setup was not optimised for gaze and face tracking, as the camera shots were over the shoulder and thus slightly elevated, rather than at eye level - so the data may contain noise.",
-            "highlight_start": 476,
-            "highlight_end": 832,
+            "highlight_start": 177,
+            "highlight_end": 533,
             "highlight_text": "because we rely on video-based gaze information collection rather than dedicated eye-tracking hardware, the gaze data derived from Openface is sometimes sub-optimal the camera setup was not optimised for gaze and face tracking, as the camera shots were over the shoulder and thus slightly elevated, rather than at eye level - so the data may contain noise.",
             "justification": "The authors admit that their data collection method resulted in sub-optimal, noisy data, which is a defect in the quality of the dataset itself."
           }
@@ -353894,18 +353894,18 @@
         "code_name": "Methodological Constraints",
         "evidence": [
           {
-            "segmented_id": "2023.findings-emnlp.1026_s03",
+            "segmented_id": "2023.findings-emnlp.1026_s05",
             "segmented": "A third limitation concerns the alignment of utterances with gaze labels.",
-            "highlight_start": 149,
-            "highlight_end": 222,
+            "highlight_start": 717,
+            "highlight_end": 790,
             "highlight_text": "A third limitation concerns the alignment of utterances with gaze labels.",
             "justification": "The authors introduce a limitation regarding their alignment methodology."
           },
           {
-            "segmented_id": "2023.findings-emnlp.1026_s04",
+            "segmented_id": "2023.findings-emnlp.1026_s06",
             "segmented": "Since German words can be very long (e.g. 'Tiefseeabenteuer', the name of the board game), the simplified assumption that all words have the same duration and align with the same number of gaze labels will cause some noise.",
-            "highlight_start": 314,
-            "highlight_end": 446,
+            "highlight_start": 882,
+            "highlight_end": 1014,
             "highlight_text": "the simplified assumption that all words have the same duration and align with the same number of gaze labels will cause some noise.",
             "justification": "The authors explicitly state that a simplified mathematical assumption embedded in their design logic directly causes noise and errors in the alignment."
           }
@@ -353915,10 +353915,10 @@
         "code_name": "Non-Limitation: Contextual Justification",
         "evidence": [
           {
-            "segmented_id": "2023.findings-emnlp.1026_s06",
+            "segmented_id": "2023.findings-emnlp.1026_s04",
             "segmented": "This compromise was necessary to meet multiple analysis objectives and also to avoid disrupting the naturalness of the conversational setting (e.g., by using wearable eye-trackers).",
-            "highlight_start": 833,
-            "highlight_end": 974,
+            "highlight_start": 534,
+            "highlight_end": 675,
             "highlight_text": "This compromise was necessary to meet multiple analysis objectives and also to avoid disrupting the naturalness of the conversational setting",
             "justification": "The authors defend their decision to use sub-optimal hardware by citing the need to preserve ecological validity (naturalness), justifying the resulting data noise."
           }

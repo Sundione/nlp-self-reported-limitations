@@ -92854,7 +92854,7 @@
     "paper_id": "2022.emnlp-main.618",
     "title": "Detecting Label Errors by Using Pre-Trained Language Models",
     "abstract": "We show that large pre-trained language models are inherently highly capable of identifying label errors in natural language datasets: simply examining out-of-sample data points in descending order of fine-tuned task loss significantly outperforms more complex error-detection mechanisms proposed in previous work. To this end, we contribute a novel method for introducing realistic, human-originated label noise into existing crowdsourced datasets such as SNLI and TweetNLP. We show that this noise has similar properties to real, hand-verified label errors, and is harder to detect than existing synthetic noise, creating challenges for model robustness.We argue that human-originated noise is a better standard for evaluation than synthetic noise. Finally, we use crowdsourced verification to evaluate the detection of real errors on IMDB, Amazon Reviews, and Recon, and confirm that pre-trained models perform at a 9â€“36% higher absolute Area Under the Precision-Recall Curve than existing models.",
-    "limitation": "Partial metrics. Determining the true recall of a label error detection method on a real datasets is generally infeasible due to its high cost; this requires a complete re-evaluation so as to identify every label error within the dataset. While some datasets exist in which this has been undertaken, such as Hovy et al.\n\n(2014) for TweetNLP, for most datasets containing organic label errors, we can only assess precision directly.\n\nTo mitigate this, we can estimate recall by estimating total dataset error counts using sampling techniques. As a result of this limitation, we prefer AUPR over AUROC (Area Under the Receiving Operating Curve) as our overall assessment metric: estimates of AUPR are scaled by a fixed ratio, and therefore comparable between models on the same dataset, whereas AUROC is nonlinear with respect to the estimate.\n\n## Requires multiple annotations per label.\n\nHuman-originated noising methods are only applicable to datasets which include at least two human annotations per label. While it is becoming increasingly common to release individual-level annotator data, this is not an ubiquitous practice.\n\nCleaning benchmark data. In our analysis of model performance gains derived from applying our methods to cleaning evaluation data, we find that cleaning validation splits enables the selection of models with better test performance. Such a method may be useful in a large number of applications.\n\nThis limitation is shared with other existing model-based scoring methods such as BERTScore (Zhang* et al., 2020).\n\nHowever, we caution against using this method to clean data intended for use in comparing performance across model families and variants: the cleaning process may bias any such benchmarks toward the models most similar to the model used to clean the data. While our method improves the performance of a given model on a task, and correcting label errors always improves the validity of test data, these improvements is unlikely to improve the performance of all models by the same amount.",
+    "limitation": "Partial metrics. Determining the true recall of a label error detection method on a real datasets is generally infeasible due to its high cost; this requires a complete re-evaluation so as to identify every label error within the dataset. While some datasets exist in which this has been undertaken, such as Hovy et al.\n\n(2014) for TweetNLP, for most datasets containing organic label errors, we can only assess precision directly.\n\nTo mitigate this, we can estimate recall by estimating total dataset error counts using sampling techniques. As a result of this limitation, we prefer AUPR over AUROC (Area Under the Receiving Operating Curve) as our overall assessment metric: estimates of AUPR are scaled by a fixed ratio, and therefore comparable between models on the same dataset, whereas AUROC is nonlinear with respect to the estimate.\n\n## Requires multiple annotations per label.\n\nHuman-originated noising methods are only applicable to datasets which include at least two human annotations per label. While it is becoming increasingly common to release individual-level annotator data, this is not an ubiquitous practice.\n\nCleaning benchmark data. In our analysis of model performance gains derived from applying our methods to cleaning evaluation data, we find that cleaning validation splits enables the selection of models with better test performance. Such a method may be useful in a large number of applications.\n\nHowever, we caution against using this method to clean data intended for use in comparing performance across model families and variants: the cleaning process may bias any such benchmarks toward the models most similar to the model used to clean the data. While our method improves the performance of a given model on a task, and correcting label errors always improves the validity of test data, these improvements is unlikely to improve the performance of all models by the same amount.\n\nThis limitation is shared with other existing model-based scoring methods such as BERTScore (Zhang* et al., 2020).",
     "segmented_text": {
       "2022.emnlp-main.618_s01": "Partial metrics.",
       "2022.emnlp-main.618_s02": "Determining the true recall of a label error detection method on a real datasets is generally infeasible due to its high cost; this requires a complete re-evaluation so as to identify every label error within the dataset.",
@@ -92868,9 +92868,9 @@
       "2022.emnlp-main.618_s10": "Cleaning benchmark data.",
       "2022.emnlp-main.618_s11": "In our analysis of model performance gains derived from applying our methods to cleaning evaluation data, we find that cleaning validation splits enables the selection of models with better test performance.",
       "2022.emnlp-main.618_s12": "Such a method may be useful in a large number of applications.",
-      "2022.emnlp-main.618_s13": "This limitation is shared with other existing model-based scoring methods such as BERTScore (Zhang* et al., 2020).",
-      "2022.emnlp-main.618_s14": "However, we caution against using this method to clean data intended for use in comparing performance across model families and variants: the cleaning process may bias any such benchmarks toward the models most similar to the model used to clean the data.",
-      "2022.emnlp-main.618_s15": "While our method improves the performance of a given model on a task, and correcting label errors always improves the validity of test data, these improvements is unlikely to improve the performance of all models by the same amount."
+      "2022.emnlp-main.618_s13": "However, we caution against using this method to clean data intended for use in comparing performance across model families and variants: the cleaning process may bias any such benchmarks toward the models most similar to the model used to clean the data.",
+      "2022.emnlp-main.618_s14": "While our method improves the performance of a given model on a task, and correcting label errors always improves the validity of test data, these improvements is unlikely to improve the performance of all models by the same amount.",
+      "2022.emnlp-main.618_s15": "This limitation is shared with other existing model-based scoring methods such as BERTScore (Zhang* et al., 2020)."
     },
     "existing_code": [
       "Data Scarcity",
@@ -92929,18 +92929,18 @@
             "justification": "The proposed method has a strict structural requirement for a specific type of data format to function. This is an embedded assumption that restricts applicability."
           },
           {
-            "segmented_id": "2022.emnlp-main.618_s14",
+            "segmented_id": "2022.emnlp-main.618_s13",
             "segmented": "However, we caution against using this method to clean data intended for use in comparing performance across model families and variants: the cleaning process may bias any such benchmarks toward the models most similar to the model used to clean the data.",
-            "highlight_start": 1682,
-            "highlight_end": 1798,
+            "highlight_start": 1566,
+            "highlight_end": 1682,
             "highlight_text": "the cleaning process may bias any such benchmarks toward the models most similar to the model used to clean the data",
             "justification": "The authors warn that their cleaning method structurally introduces a specific bias into the evaluation benchmarks. This is a design choice that propagates errors/bias downstream."
           },
           {
-            "segmented_id": "2022.emnlp-main.618_s15",
+            "segmented_id": "2022.emnlp-main.618_s14",
             "segmented": "While our method improves the performance of a given model on a task, and correcting label errors always improves the validity of test data, these improvements is unlikely to improve the performance of all models by the same amount.",
-            "highlight_start": 1941,
-            "highlight_end": 2031,
+            "highlight_start": 1825,
+            "highlight_end": 1915,
             "highlight_text": "these improvements is unlikely to improve the performance of all models by the same amount",
             "justification": "The method's benefits are uneven, meaning its application inherently favors certain models over others. This is a structural limitation of the approach."
           }
@@ -92984,10 +92984,10 @@
             "justification": "The authors justify their choice of evaluation metric by explaining its mathematical advantages in the context of their limitation."
           },
           {
-            "segmented_id": "2022.emnlp-main.618_s13",
+            "segmented_id": "2022.emnlp-main.618_s15",
             "segmented": "This limitation is shared with other existing model-based scoring methods such as BERTScore (Zhang* et al., 2020).",
-            "highlight_start": 1428,
-            "highlight_end": 1501,
+            "highlight_start": 1918,
+            "highlight_end": 1991,
             "highlight_text": "This limitation is shared with other existing model-based scoring methods",
             "justification": "The authors defend an upcoming limitation by invoking external context, arguing that it is a common flaw shared by other established methods in the field."
           }

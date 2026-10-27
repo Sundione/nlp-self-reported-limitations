@@ -197725,18 +197725,18 @@
     "paper_id": "2025.acl-short.26",
     "title": "Towards Geo-Culturally Grounded LLM Generations",
     "abstract": "Generative large language models (LLMs) have demonstrated gaps in diverse cultural awareness across the globe. We investigate the effect of retrieval augmented generation and search-grounding techniques on LLMs’ ability to display familiarity with various national cultures. Specifically, we compare the performance of standard LLMs, LLMs augmented with retrievals from a bespoke knowledge base (i.e., KB grounding), and LLMs augmented with retrievals from a web search (i.e., search grounding) on multiple cultural awareness benchmarks. We find that search grounding significantly improves the LLM performance on multiple-choice benchmarks that test propositional knowledge (e.g., cultural norms, artifacts, and institutions), while KB grounding’s effectiveness is limited by inadequate knowledge base coverage and a suboptimal retriever. However, search grounding also increases the risk of stereotypical judgments by language models and fails to improve evaluators’ judgments of cultural familiarity in a human evaluation with adequate statistical power. These results highlight the distinction between propositional cultural knowledge and open-ended cultural fluency when it comes to evaluating LLMs’ cultural awareness.",
-    "limitation": "We acknowledge the several limitations of our work in this paper. First, we ran our evaluations only on smaller versions of the GPT-4, Gemini 1.5, and OLMO 2 models. It remains an open question whether our pattern of results would be similar for larger versions of these models and other model families.\n\nThird, we only implement the search-grounding strategy using the Gemini model, specifically using the 'Grounding with Google Search' feature of Vertex AI. According to the metadata returned, this endto-end API has its own methods for query rewriting, incorporating retrieved texts, and providing citations, the details of which are not publicly available. Since these steps are tied to Gemini, it is not replicable for other LLMs while maintaining a fair comparison. As more LLM APIs introduce search-grounding capabilities, we hope that the lessons learned from searchgrounding Gemini, as presented in this paper, establish the necessity of carefully auditing the characteristics of any future search-grounded LLMs before using them in culturally sensitive applications. Moreover, the paper retains its core message that RAG (including searchgrounding) can improve performance with respect to cultural propositional knowledge, but not necessarily cultural fluency.\n\nSecond, for BLEnD and the human evaluation, we ran our evaluations using prompts that were relevant to ten national countries and cultures; a more comprehensive study would require the use of a wider range of national and regional cultures. With the momentum in the community to create more culturally salient resources, a more comprehensive study in the future will help identify gaps and interventions for the majority world.\n\nFinally, all of our evaluations concerned solely English-language prompts and outputs. While we take it to be an important goal for generative language models that they be able to produce culturally-aware outputs about any culture in the world's most widelyspoken language, the landscape of cultural awareness becomes much more nuanced when one considers the rich variegation that exists in phrasing and dialect across a wide range of languages. We leave it to future work to examine whether the strategies used here can be adapted to a multi-lingual context.",
+    "limitation": "We acknowledge the several limitations of our work in this paper. First, we ran our evaluations only on smaller versions of the GPT-4, Gemini 1.5, and OLMO 2 models. It remains an open question whether our pattern of results would be similar for larger versions of these models and other model families.\n\nSecond, for BLEnD and the human evaluation, we ran our evaluations using prompts that were relevant to ten national countries and cultures; a more comprehensive study would require the use of a wider range of national and regional cultures. With the momentum in the community to create more culturally salient resources, a more comprehensive study in the future will help identify gaps and interventions for the majority world.\n\nThird, we only implement the search-grounding strategy using the Gemini model, specifically using the 'Grounding with Google Search' feature of Vertex AI. According to the metadata returned, this endto-end API has its own methods for query rewriting, incorporating retrieved texts, and providing citations, the details of which are not publicly available. Since these steps are tied to Gemini, it is not replicable for other LLMs while maintaining a fair comparison. As more LLM APIs introduce search-grounding capabilities, we hope that the lessons learned from searchgrounding Gemini, as presented in this paper, establish the necessity of carefully auditing the characteristics of any future search-grounded LLMs before using them in culturally sensitive applications. Moreover, the paper retains its core message that RAG (including searchgrounding) can improve performance with respect to cultural propositional knowledge, but not necessarily cultural fluency.\n\nFinally, all of our evaluations concerned solely English-language prompts and outputs. While we take it to be an important goal for generative language models that they be able to produce culturally-aware outputs about any culture in the world's most widelyspoken language, the landscape of cultural awareness becomes much more nuanced when one considers the rich variegation that exists in phrasing and dialect across a wide range of languages. We leave it to future work to examine whether the strategies used here can be adapted to a multi-lingual context.",
     "segmented_text": {
       "2025.acl-short.26_s01": "We acknowledge the several limitations of our work in this paper.",
       "2025.acl-short.26_s02": "First, we ran our evaluations only on smaller versions of the GPT-4, Gemini 1.5, and OLMO 2 models.",
       "2025.acl-short.26_s03": "It remains an open question whether our pattern of results would be similar for larger versions of these models and other model families.",
-      "2025.acl-short.26_s04": "Third, we only implement the search-grounding strategy using the Gemini model, specifically using the 'Grounding with Google Search' feature of Vertex AI.",
-      "2025.acl-short.26_s05": "According to the metadata returned, this endto-end API has its own methods for query rewriting, incorporating retrieved texts, and providing citations, the details of which are not publicly available.",
-      "2025.acl-short.26_s06": "Since these steps are tied to Gemini, it is not replicable for other LLMs while maintaining a fair comparison.",
-      "2025.acl-short.26_s07": "As more LLM APIs introduce search-grounding capabilities, we hope that the lessons learned from searchgrounding Gemini, as presented in this paper, establish the necessity of carefully auditing the characteristics of any future search-grounded LLMs before using them in culturally sensitive applications.",
-      "2025.acl-short.26_s08": "Moreover, the paper retains its core message that RAG (including searchgrounding) can improve performance with respect to cultural propositional knowledge, but not necessarily cultural fluency.",
-      "2025.acl-short.26_s09": "Second, for BLEnD and the human evaluation, we ran our evaluations using prompts that were relevant to ten national countries and cultures; a more comprehensive study would require the use of a wider range of national and regional cultures.",
-      "2025.acl-short.26_s10": "With the momentum in the community to create more culturally salient resources, a more comprehensive study in the future will help identify gaps and interventions for the majority world.",
+      "2025.acl-short.26_s04": "Second, for BLEnD and the human evaluation, we ran our evaluations using prompts that were relevant to ten national countries and cultures; a more comprehensive study would require the use of a wider range of national and regional cultures.",
+      "2025.acl-short.26_s05": "With the momentum in the community to create more culturally salient resources, a more comprehensive study in the future will help identify gaps and interventions for the majority world.",
+      "2025.acl-short.26_s06": "Third, we only implement the search-grounding strategy using the Gemini model, specifically using the 'Grounding with Google Search' feature of Vertex AI.",
+      "2025.acl-short.26_s07": "According to the metadata returned, this endto-end API has its own methods for query rewriting, incorporating retrieved texts, and providing citations, the details of which are not publicly available.",
+      "2025.acl-short.26_s08": "Since these steps are tied to Gemini, it is not replicable for other LLMs while maintaining a fair comparison.",
+      "2025.acl-short.26_s09": "As more LLM APIs introduce search-grounding capabilities, we hope that the lessons learned from searchgrounding Gemini, as presented in this paper, establish the necessity of carefully auditing the characteristics of any future search-grounded LLMs before using them in culturally sensitive applications.",
+      "2025.acl-short.26_s10": "Moreover, the paper retains its core message that RAG (including searchgrounding) can improve performance with respect to cultural propositional knowledge, but not necessarily cultural fluency.",
       "2025.acl-short.26_s11": "Finally, all of our evaluations concerned solely English-language prompts and outputs.",
       "2025.acl-short.26_s12": "While we take it to be an important goal for generative language models that they be able to produce culturally-aware outputs about any culture in the world's most widelyspoken language, the landscape of cultural awareness becomes much more nuanced when one considers the rich variegation that exists in phrasing and dialect across a wide range of languages.",
       "2025.acl-short.26_s13": "We leave it to future work to examine whether the strategies used here can be adapted to a multi-lingual context."
@@ -197757,10 +197757,10 @@
         "code_name": "Empirical Underperformance",
         "evidence": [
           {
-            "segmented_id": "2025.acl-short.26_s08",
+            "segmented_id": "2025.acl-short.26_s10",
             "segmented": "Moreover, the paper retains its core message that RAG (including searchgrounding) can improve performance with respect to cultural propositional knowledge, but not necessarily cultural fluency.",
-            "highlight_start": 1233,
-            "highlight_end": 1270,
+            "highlight_start": 1662,
+            "highlight_end": 1699,
             "highlight_text": "but not necessarily cultural fluency.",
             "justification": "The authors note a specific empirical shortfall where the proposed method fails to yield improvements in a particular dimension (cultural fluency)."
           }
@@ -197770,10 +197770,10 @@
         "code_name": "Non-Limitation: Anticipated Impact",
         "evidence": [
           {
-            "segmented_id": "2025.acl-short.26_s07",
+            "segmented_id": "2025.acl-short.26_s09",
             "segmented": "As more LLM APIs introduce search-grounding capabilities, we hope that the lessons learned from searchgrounding Gemini, as presented in this paper, establish the necessity of carefully auditing the characteristics of any future search-grounded LLMs before using them in culturally sensitive applications.",
-            "highlight_start": 830,
-            "highlight_end": 1020,
+            "highlight_start": 1259,
+            "highlight_end": 1449,
             "highlight_text": "we hope that the lessons learned from searchgrounding Gemini, as presented in this paper, establish the necessity of carefully auditing the characteristics of any future search-grounded LLMs",
             "justification": "The authors express their hopes regarding the broader potential influence and normative impact their findings might have on the community."
           }
@@ -197796,18 +197796,18 @@
         "code_name": "Non-Limitation: Future Work",
         "evidence": [
           {
-            "segmented_id": "2025.acl-short.26_s09",
+            "segmented_id": "2025.acl-short.26_s04",
             "segmented": "Second, for BLEnD and the human evaluation, we ran our evaluations using prompts that were relevant to ten national countries and cultures; a more comprehensive study would require the use of a wider range of national and regional cultures.",
-            "highlight_start": 1412,
-            "highlight_end": 1512,
+            "highlight_start": 445,
+            "highlight_end": 545,
             "highlight_text": "a more comprehensive study would require the use of a wider range of national and regional cultures.",
             "justification": "The authors delegate the expansion of the evaluation scope to a more comprehensive future study."
           },
           {
-            "segmented_id": "2025.acl-short.26_s10",
+            "segmented_id": "2025.acl-short.26_s05",
             "segmented": "With the momentum in the community to create more culturally salient resources, a more comprehensive study in the future will help identify gaps and interventions for the majority world.",
-            "highlight_start": 1593,
-            "highlight_end": 1699,
+            "highlight_start": 626,
+            "highlight_end": 732,
             "highlight_text": "a more comprehensive study in the future will help identify gaps and interventions for the majority world.",
             "justification": "The authors suggest potential improvements and planned extensions to be explored in subsequent studies."
           },
@@ -197825,10 +197825,10 @@
         "code_name": "Non-Limitation: Strong Reported Performance",
         "evidence": [
           {
-            "segmented_id": "2025.acl-short.26_s08",
+            "segmented_id": "2025.acl-short.26_s10",
             "segmented": "Moreover, the paper retains its core message that RAG (including searchgrounding) can improve performance with respect to cultural propositional knowledge, but not necessarily cultural fluency.",
-            "highlight_start": 1127,
-            "highlight_end": 1231,
+            "highlight_start": 1556,
+            "highlight_end": 1660,
             "highlight_text": "RAG (including searchgrounding) can improve performance with respect to cultural propositional knowledge",
             "justification": "The authors explicitly highlight the empirical success and effectiveness of their approach."
           }
@@ -197838,10 +197838,10 @@
         "code_name": "Reproducibility Gap",
         "evidence": [
           {
-            "segmented_id": "2025.acl-short.26_s06",
+            "segmented_id": "2025.acl-short.26_s08",
             "segmented": "Since these steps are tied to Gemini, it is not replicable for other LLMs while maintaining a fair comparison.",
-            "highlight_start": 661,
-            "highlight_end": 771,
+            "highlight_start": 1090,
+            "highlight_end": 1200,
             "highlight_text": "Since these steps are tied to Gemini, it is not replicable for other LLMs while maintaining a fair comparison.",
             "justification": "The reliance on a proprietary, model-specific API creates a methodological barrier that prevents the broader research community from independently replicating the exact results on other models."
           }
@@ -197851,10 +197851,10 @@
         "code_name": "Resource Accessibility Barriers",
         "evidence": [
           {
-            "segmented_id": "2025.acl-short.26_s05",
+            "segmented_id": "2025.acl-short.26_s07",
             "segmented": "According to the metadata returned, this endto-end API has its own methods for query rewriting, incorporating retrieved texts, and providing citations, the details of which are not publicly available.",
-            "highlight_start": 496,
-            "highlight_end": 660,
+            "highlight_start": 925,
+            "highlight_end": 1089,
             "highlight_text": "this endto-end API has its own methods for query rewriting, incorporating retrieved texts, and providing citations, the details of which are not publicly available.",
             "justification": "The authors point out that the underlying API is a closed-source, proprietary system whose internal workings are hidden, creating an infrastructural barrier to understanding or extending the research."
           }
@@ -197880,18 +197880,18 @@
             "justification": "The authors express uncertainty about whether their findings transfer to the explicitly excluded boundaries (larger models and other families). Following the explicit boundary rule, this is a continuation of the scope limitation."
           },
           {
-            "segmented_id": "2025.acl-short.26_s04",
+            "segmented_id": "2025.acl-short.26_s06",
             "segmented": "Third, we only implement the search-grounding strategy using the Gemini model, specifically using the 'Grounding with Google Search' feature of Vertex AI.",
-            "highlight_start": 312,
-            "highlight_end": 382,
+            "highlight_start": 741,
+            "highlight_end": 811,
             "highlight_text": "we only implement the search-grounding strategy using the Gemini model",
             "justification": "The authors explicitly state a deliberate boundary, restricting their implementation to a single specific model."
           },
           {
-            "segmented_id": "2025.acl-short.26_s09",
+            "segmented_id": "2025.acl-short.26_s04",
             "segmented": "Second, for BLEnD and the human evaluation, we ran our evaluations using prompts that were relevant to ten national countries and cultures; a more comprehensive study would require the use of a wider range of national and regional cultures.",
-            "highlight_start": 1316,
-            "highlight_end": 1410,
+            "highlight_start": 349,
+            "highlight_end": 443,
             "highlight_text": "we ran our evaluations using prompts that were relevant to ten national countries and cultures",
             "justification": "The authors explicitly declare the deliberate boundaries set for their evaluation scope."
           },
@@ -222755,31 +222755,31 @@
     "paper_id": "2025.emnlp-main.1121",
     "title": "Data-Efficient Selection via Grammatical Complexity in Continual Pre-training of Domain-Specific LLMs",
     "abstract": "Data efficiency is crucial in domain-specific continual pre-training (CPT) of large language models (LLMs), especially under resource constraints. Aiming for “small data, big impact,” this work addresses the limitations of existing domain-specific data selection strategies, which often rely on scarce labeled data or computationally expensive LLMs. We introduce CDF Sampling with Grammatical Complexity (CDF-GC), an annotation-independent, efficient and interpretable data selection framework for CPT. Our approach comprehensively evaluates grammatical complexity using lexical diversity and syntactic complexity, and employs a cumulative distribution function (CDF)-based sampling strategy to balance complexity and diversity. To validate the effectiveness of CDF-GC, we conducted experiments on a financial dataset. The results demonstrate that CDF-GC significantly outperforms baselines, achieving 2.0% improvement in financial QA at the same selection ratio and even surpassing full-data training by 1.7% using only 20% of the data.",
-    "limitation": "Grammatical Complexity Completeness This study quantifies grammatical complexity (GC) using two dimensions: lexical diversity and syntactic complexity.\n\nAlthough this framework provides a relatively comprehensive evaluation, there is still significant room for improvement. In terms of lexical diversity, further indicators such as the number of token type, token type entropy, type-token ratio, and N-gram types could be introduced to enhance the precision of the evaluation. In terms of syntactic complexity, the verb ratio and other related metrics are also worth considering. Moreover, since GC is a multi-dimensional composite index, it is difficult to quantify using a single dimension, which makes it challenging to accurately measure the independent contribution of each specific metric to the final selection effect through ablation experiments.\n\nSemantic Processing Limitations While our method leverages GC to select information-rich text, and GC does reflect some semantic aspects (e.g., lexical diversity, syntactic complexity), it fundamentally struggles with deeper semantic understanding. Specifically, metrics like content word entropy and syntactic complexity operate at the lexical and syntactic levels, unable to directly assess the true semantic depth. For instance, sentences with similar GC can have vastly different semantic contentone concrete and the other abstract, requiring inference - a distinction our method cannot make. Furthermore, by focusing on isolated sentences, it neglects crucial discourse - level information such as coherence, context dependency, and pragmatics, all vital for comprehensive semantic comprehension. Therefore, despite its strength in selecting syntactically and lexically complex texts, the method is limited in tasks requiring advanced semantic understanding. Future work could integrate semantic analysis techniques into the data selection framework.\n\nObjectivity of Grammatical Complexity This study uses GC as an objective evaluation metric for data quality to reduce dependence on reward models or LLMs. However, the calculation of this metric still relies on traditional natural language processing techniques, including tasks such as tokenization, part-ofspeech tagging, and dependency parsing. Although studies have shown that the accuracy of mainstream tokenization and part-of-speech prediction techniques exceeds 95%, and the accuracy of dependency parsing tasks exceeds 90% (Che et al., 2021; Zhang et al., 2020a,b; Sun; Bird, 2006), we must acknowledge that errors in the underlying models may have a slight impact on the calculation of GC. Furthermore, as we predict sentence boundaries based on newline characters and certain punctuation marks, unexpected punctuation usage within the document could lead to deviations in sentence segmentation, potentially introducing errors in dependency parsing predictions. Based on the current maturity of the technology, we believe this metric has a high degree of objectivity, but future research could further explore the cumulative effect of syntactic analysis errors.\n\nScale Limitation Due to experimental constraints , this study only conducted CPT experiments on LLMs with a parameter size of 1B, using training dataset of\n\n10B tokens. This limitation prevented us from verifying the applicability of the CDF-GC method on larger LLMs or on larger datasets.\n\nData Diversity Limitation Although experiments demonstrate that our Balanced Sampling method can enhance overall GC and shift the distribution curve toward the higher score range, while ensuring the balance of GC and its individual dimension distributions, this balanced distribution of quantitative metrics does not necessarily reflect the diversity of data in terms of knowledge coverage, topic coverage, and other aspects.\n\nDomain Limitations Due to experimental constraints, this study exclusively validated the data selection performance of the CDF-GC method within the financial domain. While we anticipate the applicability of this method to other domains, its efficacy in such contexts necessitates further empirical investigation. Besides, while we aimed to enhance the model's ability to leverage domain knowledge without compromising its general capability, the experimental results in Table 1 indicate that the CDF-GC method did not achieve sufficiently high performance on certain general tasks when filtering domain-specific data.",
+    "limitation": "Grammatical Complexity Completeness This study quantifies grammatical complexity (GC) using two dimensions: lexical diversity and syntactic complexity.\n\nAlthough this framework provides a relatively comprehensive evaluation, there is still significant room for improvement. In terms of lexical diversity, further indicators such as the number of token type, token type entropy, type-token ratio, and N-gram types could be introduced to enhance the precision of the evaluation. In terms of syntactic complexity, the verb ratio and other related metrics are also worth considering. Moreover, since GC is a multi-dimensional composite index, it is difficult to quantify using a single dimension, which makes it challenging to accurately measure the independent contribution of each specific metric to the final selection effect through ablation experiments.\n\nObjectivity of Grammatical Complexity This study uses GC as an objective evaluation metric for data quality to reduce dependence on reward models or LLMs. However, the calculation of this metric still relies on traditional natural language processing techniques, including tasks such as tokenization, part-ofspeech tagging, and dependency parsing. Although studies have shown that the accuracy of mainstream tokenization and part-of-speech prediction techniques exceeds 95%, and the accuracy of dependency parsing tasks exceeds 90% (Che et al., 2021; Zhang et al., 2020a,b; Sun; Bird, 2006), we must acknowledge that errors in the underlying models may have a slight impact on the calculation of GC. Furthermore, as we predict sentence boundaries based on newline characters and certain punctuation marks, unexpected punctuation usage within the document could lead to deviations in sentence segmentation, potentially introducing errors in dependency parsing predictions. Based on the current maturity of the technology, we believe this metric has a high degree of objectivity, but future research could further explore the cumulative effect of syntactic analysis errors.\n\nSemantic Processing Limitations While our method leverages GC to select information-rich text, and GC does reflect some semantic aspects (e.g., lexical diversity, syntactic complexity), it fundamentally struggles with deeper semantic understanding. Specifically, metrics like content word entropy and syntactic complexity operate at the lexical and syntactic levels, unable to directly assess the true semantic depth. For instance, sentences with similar GC can have vastly different semantic contentone concrete and the other abstract, requiring inference - a distinction our method cannot make. Furthermore, by focusing on isolated sentences, it neglects crucial discourse - level information such as coherence, context dependency, and pragmatics, all vital for comprehensive semantic comprehension. Therefore, despite its strength in selecting syntactically and lexically complex texts, the method is limited in tasks requiring advanced semantic understanding. Future work could integrate semantic analysis techniques into the data selection framework.\n\nScale Limitation Due to experimental constraints , this study only conducted CPT experiments on LLMs with a parameter size of 1B, using training dataset of\n\n10B tokens. This limitation prevented us from verifying the applicability of the CDF-GC method on larger LLMs or on larger datasets.\n\nDomain Limitations Due to experimental constraints, this study exclusively validated the data selection performance of the CDF-GC method within the financial domain. While we anticipate the applicability of this method to other domains, its efficacy in such contexts necessitates further empirical investigation. Besides, while we aimed to enhance the model's ability to leverage domain knowledge without compromising its general capability, the experimental results in Table 1 indicate that the CDF-GC method did not achieve sufficiently high performance on certain general tasks when filtering domain-specific data.\n\nData Diversity Limitation Although experiments demonstrate that our Balanced Sampling method can enhance overall GC and shift the distribution curve toward the higher score range, while ensuring the balance of GC and its individual dimension distributions, this balanced distribution of quantitative metrics does not necessarily reflect the diversity of data in terms of knowledge coverage, topic coverage, and other aspects.",
     "segmented_text": {
       "2025.emnlp-main.1121_s01": "Grammatical Complexity Completeness This study quantifies grammatical complexity (GC) using two dimensions: lexical diversity and syntactic complexity.",
       "2025.emnlp-main.1121_s02": "Although this framework provides a relatively comprehensive evaluation, there is still significant room for improvement.",
       "2025.emnlp-main.1121_s03": "In terms of lexical diversity, further indicators such as the number of token type, token type entropy, type-token ratio, and N-gram types could be introduced to enhance the precision of the evaluation.",
       "2025.emnlp-main.1121_s04": "In terms of syntactic complexity, the verb ratio and other related metrics are also worth considering.",
       "2025.emnlp-main.1121_s05": "Moreover, since GC is a multi-dimensional composite index, it is difficult to quantify using a single dimension, which makes it challenging to accurately measure the independent contribution of each specific metric to the final selection effect through ablation experiments.",
-      "2025.emnlp-main.1121_s06": "Semantic Processing Limitations While our method leverages GC to select information-rich text, and GC does reflect some semantic aspects (e.g., lexical diversity, syntactic complexity), it fundamentally struggles with deeper semantic understanding.",
-      "2025.emnlp-main.1121_s07": "Specifically, metrics like content word entropy and syntactic complexity operate at the lexical and syntactic levels, unable to directly assess the true semantic depth.",
-      "2025.emnlp-main.1121_s08": "For instance, sentences with similar GC can have vastly different semantic contentone concrete and the other abstract, requiring inference - a distinction our method cannot make.",
-      "2025.emnlp-main.1121_s09": "Furthermore, by focusing on isolated sentences, it neglects crucial discourse - level information such as coherence, context dependency, and pragmatics, all vital for comprehensive semantic comprehension.",
-      "2025.emnlp-main.1121_s10": "Therefore, despite its strength in selecting syntactically and lexically complex texts, the method is limited in tasks requiring advanced semantic understanding.",
-      "2025.emnlp-main.1121_s11": "Future work could integrate semantic analysis techniques into the data selection framework.",
-      "2025.emnlp-main.1121_s12": "Objectivity of Grammatical Complexity This study uses GC as an objective evaluation metric for data quality to reduce dependence on reward models or LLMs.",
-      "2025.emnlp-main.1121_s13": "However, the calculation of this metric still relies on traditional natural language processing techniques, including tasks such as tokenization, part-of-speech tagging, and dependency parsing.",
-      "2025.emnlp-main.1121_s14": "Although studies have shown that the accuracy of mainstream tokenization and part-of-speech prediction techniques exceeds 95%, and the accuracy of dependency parsing tasks exceeds 90% (Che et al., 2021; Zhang et al., 2020a,b; Sun; Bird, 2006), we must acknowledge that errors in the underlying models may have a slight impact on the calculation of GC.",
-      "2025.emnlp-main.1121_s15": "Furthermore, as we predict sentence boundaries based on newline characters and certain punctuation marks, unexpected punctuation usage within the document could lead to deviations in sentence segmentation, potentially introducing errors in dependency parsing predictions.",
-      "2025.emnlp-main.1121_s16": "Based on the current maturity of the technology, we believe this metric has a high degree of objectivity, but future research could further explore the cumulative effect of syntactic analysis errors.",
+      "2025.emnlp-main.1121_s06": "Objectivity of Grammatical Complexity This study uses GC as an objective evaluation metric for data quality to reduce dependence on reward models or LLMs.",
+      "2025.emnlp-main.1121_s07": "However, the calculation of this metric still relies on traditional natural language processing techniques, including tasks such as tokenization, part-of-speech tagging, and dependency parsing.",
+      "2025.emnlp-main.1121_s08": "Although studies have shown that the accuracy of mainstream tokenization and part-of-speech prediction techniques exceeds 95%, and the accuracy of dependency parsing tasks exceeds 90% (Che et al., 2021; Zhang et al., 2020a,b; Sun; Bird, 2006), we must acknowledge that errors in the underlying models may have a slight impact on the calculation of GC.",
+      "2025.emnlp-main.1121_s09": "Furthermore, as we predict sentence boundaries based on newline characters and certain punctuation marks, unexpected punctuation usage within the document could lead to deviations in sentence segmentation, potentially introducing errors in dependency parsing predictions.",
+      "2025.emnlp-main.1121_s10": "Based on the current maturity of the technology, we believe this metric has a high degree of objectivity, but future research could further explore the cumulative effect of syntactic analysis errors.",
+      "2025.emnlp-main.1121_s11": "Semantic Processing Limitations While our method leverages GC to select information-rich text, and GC does reflect some semantic aspects (e.g., lexical diversity, syntactic complexity), it fundamentally struggles with deeper semantic understanding.",
+      "2025.emnlp-main.1121_s12": "Specifically, metrics like content word entropy and syntactic complexity operate at the lexical and syntactic levels, unable to directly assess the true semantic depth.",
+      "2025.emnlp-main.1121_s13": "For instance, sentences with similar GC can have vastly different semantic contentone concrete and the other abstract, requiring inference - a distinction our method cannot make.",
+      "2025.emnlp-main.1121_s14": "Furthermore, by focusing on isolated sentences, it neglects crucial discourse - level information such as coherence, context dependency, and pragmatics, all vital for comprehensive semantic comprehension.",
+      "2025.emnlp-main.1121_s15": "Therefore, despite its strength in selecting syntactically and lexically complex texts, the method is limited in tasks requiring advanced semantic understanding.",
+      "2025.emnlp-main.1121_s16": "Future work could integrate semantic analysis techniques into the data selection framework.",
       "2025.emnlp-main.1121_s17": "Scale Limitation Due to experimental constraints , this study only conducted CPT experiments on LLMs with a parameter size of 1B, using training dataset of",
       "2025.emnlp-main.1121_s18": "10B tokens.",
       "2025.emnlp-main.1121_s19": "This limitation prevented us from verifying the applicability of the CDF-GC method on larger LLMs or on larger datasets.",
-      "2025.emnlp-main.1121_s20": "Data Diversity Limitation Although experiments demonstrate that our Balanced Sampling method can enhance overall GC and shift the distribution curve toward the higher score range, while ensuring the balance of GC and its individual dimension distributions, this balanced distribution of quantitative metrics does not necessarily reflect the diversity of data in terms of knowledge coverage, topic coverage, and other aspects.",
-      "2025.emnlp-main.1121_s21": "Domain Limitations Due to experimental constraints, this study exclusively validated the data selection performance of the CDF-GC method within the financial domain.",
-      "2025.emnlp-main.1121_s22": "While we anticipate the applicability of this method to other domains, its efficacy in such contexts necessitates further empirical investigation.",
-      "2025.emnlp-main.1121_s23": "Besides, while we aimed to enhance the model's ability to leverage domain knowledge without compromising its general capability, the experimental results in Table 1 indicate that the CDF-GC method did not achieve sufficiently high performance on certain general tasks when filtering domain-specific data."
+      "2025.emnlp-main.1121_s20": "Domain Limitations Due to experimental constraints, this study exclusively validated the data selection performance of the CDF-GC method within the financial domain.",
+      "2025.emnlp-main.1121_s21": "While we anticipate the applicability of this method to other domains, its efficacy in such contexts necessitates further empirical investigation.",
+      "2025.emnlp-main.1121_s22": "Besides, while we aimed to enhance the model's ability to leverage domain knowledge without compromising its general capability, the experimental results in Table 1 indicate that the CDF-GC method did not achieve sufficiently high performance on certain general tasks when filtering domain-specific data.",
+      "2025.emnlp-main.1121_s23": "Data Diversity Limitation Although experiments demonstrate that our Balanced Sampling method can enhance overall GC and shift the distribution curve toward the higher score range, while ensuring the balance of GC and its individual dimension distributions, this balanced distribution of quantitative metrics does not necessarily reflect the diversity of data in terms of knowledge coverage, topic coverage, and other aspects."
     },
     "existing_code": [
       "Dependency on Upstream Quality",
@@ -222797,10 +222797,10 @@
         "code_name": "Dependency on Upstream Quality",
         "evidence": [
           {
-            "segmented_id": "2025.emnlp-main.1121_s14",
+            "segmented_id": "2025.emnlp-main.1121_s08",
             "segmented": "Although studies have shown that the accuracy of mainstream tokenization and part-of-speech prediction techniques exceeds 95%, and the accuracy of dependency parsing tasks exceeds 90% (Che et al., 2021; Zhang et al., 2020a,b; Sun; Bird, 2006), we must acknowledge that errors in the underlying models may have a slight impact on the calculation of GC.",
-            "highlight_start": 2505,
-            "highlight_end": 2612,
+            "highlight_start": 1448,
+            "highlight_end": 1555,
             "highlight_text": "we must acknowledge that errors in the underlying models may have a slight impact on the calculation of GC.",
             "justification": "The authors state that their method's performance is bottlenecked by the quality and potential errors of the upstream base models (tokenizers, parsers)."
           }
@@ -222810,10 +222810,10 @@
         "code_name": "Empirical Underperformance",
         "evidence": [
           {
-            "segmented_id": "2025.emnlp-main.1121_s23",
+            "segmented_id": "2025.emnlp-main.1121_s22",
             "segmented": "Besides, while we aimed to enhance the model's ability to leverage domain knowledge without compromising its general capability, the experimental results in Table 1 indicate that the CDF-GC method did not achieve sufficiently high performance on certain general tasks when filtering domain-specific data.",
-            "highlight_start": 4250,
-            "highlight_end": 4384,
+            "highlight_start": 3823,
+            "highlight_end": 3957,
             "highlight_text": "experimental results in Table 1 indicate that the CDF-GC method did not achieve sufficiently high performance on certain general tasks",
             "justification": "The sentence explicitly reports a quantitative shortfall where the proposed method yields underwhelming empirical performance on specific tasks."
           }
@@ -222836,34 +222836,34 @@
         "code_name": "Methodological Constraints",
         "evidence": [
           {
-            "segmented_id": "2025.emnlp-main.1121_s06",
+            "segmented_id": "2025.emnlp-main.1121_s11",
             "segmented": "Semantic Processing Limitations While our method leverages GC to select information-rich text, and GC does reflect some semantic aspects (e.g., lexical diversity, syntactic complexity), it fundamentally struggles with deeper semantic understanding.",
-            "highlight_start": 1042,
-            "highlight_end": 1104,
+            "highlight_start": 2215,
+            "highlight_end": 2277,
             "highlight_text": "it fundamentally struggles with deeper semantic understanding.",
             "justification": "The sentence identifies a behavioral and algorithmic limitation where the method fails to capture deep semantic meaning."
           },
           {
-            "segmented_id": "2025.emnlp-main.1121_s09",
+            "segmented_id": "2025.emnlp-main.1121_s14",
             "segmented": "Furthermore, by focusing on isolated sentences, it neglects crucial discourse - level information such as coherence, context dependency, and pragmatics, all vital for comprehensive semantic comprehension.",
-            "highlight_start": 1466,
-            "highlight_end": 1604,
+            "highlight_start": 2639,
+            "highlight_end": 2777,
             "highlight_text": "by focusing on isolated sentences, it neglects crucial discourse - level information such as coherence, context dependency, and pragmatics",
             "justification": "The authors identify a specific architectural constraint (focusing on isolated sentences) that structurally prevents the method from capturing discourse-level information."
           },
           {
-            "segmented_id": "2025.emnlp-main.1121_s15",
+            "segmented_id": "2025.emnlp-main.1121_s09",
             "segmented": "Furthermore, as we predict sentence boundaries based on newline characters and certain punctuation marks, unexpected punctuation usage within the document could lead to deviations in sentence segmentation, potentially introducing errors in dependency parsing predictions.",
-            "highlight_start": 2626,
-            "highlight_end": 2849,
+            "highlight_start": 1569,
+            "highlight_end": 1792,
             "highlight_text": "as we predict sentence boundaries based on newline characters and certain punctuation marks, unexpected punctuation usage within the document could lead to deviations in sentence segmentation, potentially introducing errors",
             "justification": "The authors identify a fundamental restriction in their preprocessing logic (relying on specific characters) that structurally introduces errors when faced with unexpected formatting."
           },
           {
-            "segmented_id": "2025.emnlp-main.1121_s20",
+            "segmented_id": "2025.emnlp-main.1121_s23",
             "segmented": "Data Diversity Limitation Although experiments demonstrate that our Balanced Sampling method can enhance overall GC and shift the distribution curve toward the higher score range, while ensuring the balance of GC and its individual dimension distributions, this balanced distribution of quantitative metrics does not necessarily reflect the diversity of data in terms of knowledge coverage, topic coverage, and other aspects.",
-            "highlight_start": 3634,
-            "highlight_end": 3802,
+            "highlight_start": 4253,
+            "highlight_end": 4421,
             "highlight_text": "this balanced distribution of quantitative metrics does not necessarily reflect the diversity of data in terms of knowledge coverage, topic coverage, and other aspects.",
             "justification": "The authors identify a structural vulnerability in their chosen method (Balanced Sampling), noting that balancing quantitative metrics structurally fails to capture true qualitative diversity."
           }
@@ -222889,26 +222889,26 @@
             "justification": "Another suggestion for potential improvements to be considered in the future."
           },
           {
-            "segmented_id": "2025.emnlp-main.1121_s11",
+            "segmented_id": "2025.emnlp-main.1121_s16",
             "segmented": "Future work could integrate semantic analysis techniques into the data selection framework.",
-            "highlight_start": 1820,
-            "highlight_end": 1911,
+            "highlight_start": 2993,
+            "highlight_end": 3084,
             "highlight_text": "Future work could integrate semantic analysis techniques into the data selection framework.",
             "justification": "The authors explicitly delegate the integration of semantic analysis to future studies."
           },
           {
-            "segmented_id": "2025.emnlp-main.1121_s16",
+            "segmented_id": "2025.emnlp-main.1121_s10",
             "segmented": "Based on the current maturity of the technology, we believe this metric has a high degree of objectivity, but future research could further explore the cumulative effect of syntactic analysis errors.",
-            "highlight_start": 2995,
-            "highlight_end": 3084,
+            "highlight_start": 1938,
+            "highlight_end": 2027,
             "highlight_text": "future research could further explore the cumulative effect of syntactic analysis errors.",
             "justification": "The authors suggest a specific unaddressed question to be explored in subsequent studies."
           },
           {
-            "segmented_id": "2025.emnlp-main.1121_s22",
+            "segmented_id": "2025.emnlp-main.1121_s21",
             "segmented": "While we anticipate the applicability of this method to other domains, its efficacy in such contexts necessitates further empirical investigation.",
-            "highlight_start": 3970,
-            "highlight_end": 4116,
+            "highlight_start": 3543,
+            "highlight_end": 3689,
             "highlight_text": "While we anticipate the applicability of this method to other domains, its efficacy in such contexts necessitates further empirical investigation.",
             "justification": "The authors delegate the testing of other domains to future empirical investigation."
           }
@@ -222926,10 +222926,10 @@
             "justification": "A neutral, factual description of how the proposed metric is constructed."
           },
           {
-            "segmented_id": "2025.emnlp-main.1121_s12",
+            "segmented_id": "2025.emnlp-main.1121_s06",
             "segmented": "Objectivity of Grammatical Complexity This study uses GC as an objective evaluation metric for data quality to reduce dependence on reward models or LLMs.",
-            "highlight_start": 1951,
-            "highlight_end": 2067,
+            "highlight_start": 894,
+            "highlight_end": 1010,
             "highlight_text": "This study uses GC as an objective evaluation metric for data quality to reduce dependence on reward models or LLMs.",
             "justification": "A factual description of the method's purpose and design rationale."
           }
@@ -222939,7 +222939,7 @@
         "code_name": "Reliance on External Tools or Resources",
         "evidence": [
           {
-            "segmented_id": "2025.emnlp-main.1121_s13",
+            "segmented_id": "2025.emnlp-main.1121_s07",
             "segmented": "However, the calculation of this metric still relies on traditional natural language processing techniques, including tasks such as tokenization, part-of-speech tagging, and dependency parsing.",
             "highlight_start": 13,
             "highlight_end": 193,
@@ -222968,10 +222968,10 @@
             "justification": "The authors restate the scope limitation, confirming they did not test on larger models or datasets."
           },
           {
-            "segmented_id": "2025.emnlp-main.1121_s21",
+            "segmented_id": "2025.emnlp-main.1121_s20",
             "segmented": "Domain Limitations Due to experimental constraints, this study exclusively validated the data selection performance of the CDF-GC method within the financial domain.",
-            "highlight_start": 3867,
-            "highlight_end": 3969,
+            "highlight_start": 3440,
+            "highlight_end": 3542,
             "highlight_text": "exclusively validated the data selection performance of the CDF-GC method within the financial domain.",
             "justification": "The authors explicitly declare a deliberate boundary, restricting their evaluation exclusively to one domain."
           }
@@ -296525,7 +296525,7 @@
     "paper_id": "2025.emnlp-main.1631",
     "title": "Rapid Word Learning Through Meta In-Context Learning",
     "abstract": "Humans can quickly learn a new word from a few illustrative examples, and then systematically and flexibly use it in novel contexts. Yet the abilities of current language models for few-shot word learning, and methods for improving these abilities, are underexplored. In this study, we introduce a novel method, Meta-training for IN-context learNing Of Words (Minnow). This method trains language models to generate new examples of a word’s usage given a few in-context examples, using a special placeholder token to represent the new word. This training is repeated on many new words to develop a general word-learning ability. We find that training models from scratch with Minnow on human-scale child-directed language enables strong few-shot word learning, comparable to a large language model (LLM) pre-trained on orders of magnitude more data. Furthermore, through discriminative and generative evaluations, we demonstrate that finetuning pre-trained LLMs with Minnow improves their ability to discriminate between new words, identify syntactic categories of new words, and generate reasonable new usages and definitions for new words, based on one or a few in-context examples. These findings highlight the data efficiency of Minnow and its potential to improve language model performance in word learning tasks.",
-    "limitation": "Learning Settings In this work, we consider word learning only in the text modality, in which the language model learns the meaning from the distribution of words. However, many words have real-world ref- erences, which usually accompany human word learning. We also use aggregated data from multiple sources, not from single-human/child input. Thus, a multimodal, grounded setting of word learning using a single agent's input would be more realistic.\n\nIn addition, we only consider learning a single new word on the fly, and each word is represented by the same special token. However, in real-world learning, both humans and models need to continually learn multiple words, usages, and even abstract rules (Sinha et al., 2023; Lampinen, 2024; Mueller et al., 2024). Future work could implement continual learning of multiple different words by meta-training to learn real words or pseudo-words, and by utilizing long-term memory. In that way, we could also allow the rapid word learning ability to co-exist with other general abilities of language models.\n\nNovelty of New Words When Testing LLMs When testing LLMs (Section 5), the words and example sentences we use may already exist in the pre-training data, potentially allowing LLMs to recall known word meanings rather than learn genuinely new ones 12 (note, however, the Chimera dataset introduces new concepts\n\n12 Eisenschlos et al. (2023) suggested a similar solution called the reverse dictionary (Hill et al., 2016), through which the model may identify the underlying concept from the word definition.\n\nwhich are unusual and not lexicalized). The performance of the baseline LLMs shows that, even with this potential worry, there is room for improvement, which the Minnow-finetuned LLMs are able to achieve.\n\nMorphological Features In the paper, we focus on learning word-forms, each represented by a single special placeholder token, without considering morphological features. However, morphological features in a word may allow systematic recombination of meanings from related words, decrease the time needed to derive and recognize the word (Nagy et al., 1989), and help children to learn the word (Moore and Bergelson, 2024). In Appendix H, we discuss in detail our treatments of words and potential issues. In summary, our Minnow models are somehow robust to these variations. Future work could take morphological features into consideration during training, and conduct targeted evaluations of morphological variations of the learned words.\n\nModels trained from scratch with Minnow do not have this limitation. Their training data explicitly excludes held-out test words (Section 4). Therefore, their test performance reflects their genuine ability to learn novel words, and this ability can be developed by Minnow.\n\nQuantitative Evaluation of Generations In the generative evaluation settings (Section 5.3 and 5.4), we used ROUGE-L, BERTScore F1, and LLM-as-a-Judge (GPT-4o in our case) for automatic quantitative evaluations. However, these evaluations are imperfect. For example, different metrics are suitable for generations in different lengths, and LLM evaluators are known to have biases and inconsistencies (Doostmohammadi et al., 2024; Stureborg et al., 2024). Future work should conduct careful human evaluations for further validation to avoid these potential issues.",
+    "limitation": "Learning Settings In this work, we consider word learning only in the text modality, in which the language model learns the meaning from the distribution of words. However, many words have real-world ref- erences, which usually accompany human word learning. We also use aggregated data from multiple sources, not from single-human/child input. Thus, a multimodal, grounded setting of word learning using a single agent's input would be more realistic.\n\nIn addition, we only consider learning a single new word on the fly, and each word is represented by the same special token. However, in real-world learning, both humans and models need to continually learn multiple words, usages, and even abstract rules (Sinha et al., 2023; Lampinen, 2024; Mueller et al., 2024). Future work could implement continual learning of multiple different words by meta-training to learn real words or pseudo-words, and by utilizing long-term memory. In that way, we could also allow the rapid word learning ability to co-exist with other general abilities of language models.\n\nNovelty of New Words When Testing LLMs When testing LLMs (Section 5), the words and example sentences we use may already exist in the pre-training data, potentially allowing LLMs to recall known word meanings rather than learn genuinely new ones 12 (note, however, the Chimera dataset introduces new concepts\n\n12 Eisenschlos et al. (2023) suggested a similar solution called the reverse dictionary (Hill et al., 2016), through which the model may identify the underlying concept from the word definition.\n\nwhich are unusual and not lexicalized). The performance of the baseline LLMs shows that, even with this potential worry, there is room for improvement, which the Minnow-finetuned LLMs are able to achieve.\n\nModels trained from scratch with Minnow do not have this limitation. Their training data explicitly excludes held-out test words (Section 4). Therefore, their test performance reflects their genuine ability to learn novel words, and this ability can be developed by Minnow.\n\nMorphological Features In the paper, we focus on learning word-forms, each represented by a single special placeholder token, without considering morphological features. However, morphological features in a word may allow systematic recombination of meanings from related words, decrease the time needed to derive and recognize the word (Nagy et al., 1989), and help children to learn the word (Moore and Bergelson, 2024). In Appendix H, we discuss in detail our treatments of words and potential issues. In summary, our Minnow models are somehow robust to these variations. Future work could take morphological features into consideration during training, and conduct targeted evaluations of morphological variations of the learned words.\n\nQuantitative Evaluation of Generations In the generative evaluation settings (Section 5.3 and 5.4), we used ROUGE-L, BERTScore F1, and LLM-as-a-Judge (GPT-4o in our case) for automatic quantitative evaluations. However, these evaluations are imperfect. For example, different metrics are suitable for generations in different lengths, and LLM evaluators are known to have biases and inconsistencies (Doostmohammadi et al., 2024; Stureborg et al., 2024). Future work should conduct careful human evaluations for further validation to avoid these potential issues.",
     "segmented_text": {
       "2025.emnlp-main.1631_s01": "Learning Settings In this work, we consider word learning only in the text modality, in which the language model learns the meaning from the distribution of words.",
       "2025.emnlp-main.1631_s02": "However, many words have real-world ref- erences, which usually accompany human word learning.",
@@ -296538,14 +296538,14 @@
       "2025.emnlp-main.1631_s09": "Novelty of New Words When Testing LLMs When testing LLMs (Section 5), the words and example sentences we use may already exist in the pre-training data, potentially allowing LLMs to recall known word meanings rather than learn genuinely new ones 12 (note, however, the Chimera dataset introduces new concepts\n\n12 Eisenschlos et al. (2023) suggested a similar solution called the reverse dictionary (Hill et al., 2016), through which the model may identify the underlying concept from the word definition.",
       "2025.emnlp-main.1631_s10": "which are unusual and not lexicalized).",
       "2025.emnlp-main.1631_s11": "The performance of the baseline LLMs shows that, even with this potential worry, there is room for improvement, which the Minnow-finetuned LLMs are able to achieve.",
-      "2025.emnlp-main.1631_s12": "Morphological Features In the paper, we focus on learning word-forms, each represented by a single special placeholder token, without considering morphological features.",
-      "2025.emnlp-main.1631_s13": "However, morphological features in a word may allow systematic recombination of meanings from related words, decrease the time needed to derive and recognize the word (Nagy et al., 1989), and help children to learn the word (Moore and Bergelson, 2024).",
-      "2025.emnlp-main.1631_s14": "In Appendix H, we discuss in detail our treatments of words and potential issues.",
-      "2025.emnlp-main.1631_s15": "In summary, our Minnow models are somehow robust to these variations.",
-      "2025.emnlp-main.1631_s16": "Future work could take morphological features into consideration during training, and conduct targeted evaluations of morphological variations of the learned words.",
-      "2025.emnlp-main.1631_s17": "Models trained from scratch with Minnow do not have this limitation.",
-      "2025.emnlp-main.1631_s18": "Their training data explicitly excludes held-out test words (Section 4).",
-      "2025.emnlp-main.1631_s19": "Therefore, their test performance reflects their genuine ability to learn novel words, and this ability can be developed by Minnow.",
+      "2025.emnlp-main.1631_s12": "Models trained from scratch with Minnow do not have this limitation.",
+      "2025.emnlp-main.1631_s13": "Their training data explicitly excludes held-out test words (Section 4).",
+      "2025.emnlp-main.1631_s14": "Therefore, their test performance reflects their genuine ability to learn novel words, and this ability can be developed by Minnow.",
+      "2025.emnlp-main.1631_s15": "Morphological Features In the paper, we focus on learning word-forms, each represented by a single special placeholder token, without considering morphological features.",
+      "2025.emnlp-main.1631_s16": "However, morphological features in a word may allow systematic recombination of meanings from related words, decrease the time needed to derive and recognize the word (Nagy et al., 1989), and help children to learn the word (Moore and Bergelson, 2024).",
+      "2025.emnlp-main.1631_s17": "In Appendix H, we discuss in detail our treatments of words and potential issues.",
+      "2025.emnlp-main.1631_s18": "In summary, our Minnow models are somehow robust to these variations.",
+      "2025.emnlp-main.1631_s19": "Future work could take morphological features into consideration during training, and conduct targeted evaluations of morphological variations of the learned words.",
       "2025.emnlp-main.1631_s20": "Quantitative Evaluation of Generations In the generative evaluation settings (Section 5.3 and 5.4), we used ROUGE-L, BERTScore F1, and LLM-as-a-Judge (GPT-4o in our case) for automatic quantitative evaluations.",
       "2025.emnlp-main.1631_s21": "However, these evaluations are imperfect.",
       "2025.emnlp-main.1631_s22": "For example, different metrics are suitable for generations in different lengths, and LLM evaluators are known to have biases and inconsistencies (Doostmohammadi et al., 2024; Stureborg et al., 2024).",
@@ -296590,10 +296590,10 @@
             "justification": "The authors describe a proactive step (using the Chimera dataset with unusual concepts) to mitigate the data leakage risk mentioned in the previous sentence."
           },
           {
-            "segmented_id": "2025.emnlp-main.1631_s18",
+            "segmented_id": "2025.emnlp-main.1631_s13",
             "segmented": "Their training data explicitly excludes held-out test words (Section 4).",
-            "highlight_start": 2588,
-            "highlight_end": 2641,
+            "highlight_start": 1847,
+            "highlight_end": 1900,
             "highlight_text": "training data explicitly excludes held-out test words",
             "justification": "The authors describe a proactive step they implemented (excluding test words) to prevent data contamination."
           }
@@ -296619,10 +296619,10 @@
             "justification": "The authors invoke external background and real-world constraints to justify why their single-word scope is a limitation compared to actual learning."
           },
           {
-            "segmented_id": "2025.emnlp-main.1631_s13",
+            "segmented_id": "2025.emnlp-main.1631_s16",
             "segmented": "However, morphological features in a word may allow systematic recombination of meanings from related words, decrease the time needed to derive and recognize the word (Nagy et al., 1989), and help children to learn the word (Moore and Bergelson, 2024).",
-            "highlight_start": 1951,
-            "highlight_end": 2165,
+            "highlight_start": 2226,
+            "highlight_end": 2440,
             "highlight_text": "morphological features in a word may allow systematic recombination of meanings from related words, decrease the time needed to derive and recognize the word (Nagy et al., 1989), and help children to learn the word",
             "justification": "The authors provide external background on the benefits of morphological features to justify why excluding them is a notable limitation."
           }
@@ -296640,10 +296640,10 @@
             "justification": "The authors suggest a potential improvement to address the single-word limitation in subsequent studies."
           },
           {
-            "segmented_id": "2025.emnlp-main.1631_s16",
+            "segmented_id": "2025.emnlp-main.1631_s19",
             "segmented": "Future work could take morphological features into consideration during training, and conduct targeted evaluations of morphological variations of the learned words.",
-            "highlight_start": 2347,
-            "highlight_end": 2427,
+            "highlight_start": 2622,
+            "highlight_end": 2702,
             "highlight_text": "Future work could take morphological features into consideration during training",
             "justification": "The authors suggest incorporating the excluded morphological features in subsequent studies."
           },
@@ -296661,10 +296661,10 @@
         "code_name": "Non-Limitation: Method Details",
         "evidence": [
           {
-            "segmented_id": "2025.emnlp-main.1631_s14",
+            "segmented_id": "2025.emnlp-main.1631_s17",
             "segmented": "In Appendix H, we discuss in detail our treatments of words and potential issues.",
-            "highlight_start": 2213,
-            "highlight_end": 2275,
+            "highlight_start": 2488,
+            "highlight_end": 2550,
             "highlight_text": "discuss in detail our treatments of words and potential issues",
             "justification": "This is a factual description directing the reader to methodological details in the appendix."
           }
@@ -296674,10 +296674,10 @@
         "code_name": "Non-Limitation: Method Strength",
         "evidence": [
           {
-            "segmented_id": "2025.emnlp-main.1631_s17",
+            "segmented_id": "2025.emnlp-main.1631_s12",
             "segmented": "Models trained from scratch with Minnow do not have this limitation.",
-            "highlight_start": 2513,
-            "highlight_end": 2581,
+            "highlight_start": 1772,
+            "highlight_end": 1840,
             "highlight_text": "Models trained from scratch with Minnow do not have this limitation.",
             "justification": "The authors highlight a structural advantage of their proposed approach when trained from scratch."
           }
@@ -296695,18 +296695,18 @@
             "justification": "The authors explicitly highlight the empirical success of their fine-tuned models despite the potential worries."
           },
           {
-            "segmented_id": "2025.emnlp-main.1631_s15",
+            "segmented_id": "2025.emnlp-main.1631_s18",
             "segmented": "In summary, our Minnow models are somehow robust to these variations.",
-            "highlight_start": 2293,
-            "highlight_end": 2345,
+            "highlight_start": 2568,
+            "highlight_end": 2620,
             "highlight_text": "Minnow models are somehow robust to these variations",
             "justification": "The authors explicitly highlight the empirical success and robustness of their models."
           },
           {
-            "segmented_id": "2025.emnlp-main.1631_s19",
+            "segmented_id": "2025.emnlp-main.1631_s14",
             "segmented": "Therefore, their test performance reflects their genuine ability to learn novel words, and this ability can be developed by Minnow.",
-            "highlight_start": 2672,
-            "highlight_end": 2785,
+            "highlight_start": 1931,
+            "highlight_end": 2044,
             "highlight_text": "test performance reflects their genuine ability to learn novel words, and this ability can be developed by Minnow",
             "justification": "The authors explicitly highlight the empirical success and validity of their model's learning ability."
           }
@@ -296790,10 +296790,10 @@
             "justification": "The authors explicitly state a deliberate boundary, restricting the task to learning only one word at a time."
           },
           {
-            "segmented_id": "2025.emnlp-main.1631_s12",
+            "segmented_id": "2025.emnlp-main.1631_s15",
             "segmented": "Morphological Features In the paper, we focus on learning word-forms, each represented by a single special placeholder token, without considering morphological features.",
-            "highlight_start": 1812,
-            "highlight_end": 1940,
+            "highlight_start": 2087,
+            "highlight_end": 2215,
             "highlight_text": "focus on learning word-forms, each represented by a single special placeholder token, without considering morphological features",
             "justification": "The authors clarify a deliberate boundary set in their study, explicitly excluding morphological features from consideration."
           }
@@ -628294,18 +628294,18 @@
     "paper_id": "2025.findings-emnlp.1219",
     "title": "Personalized open world plan generation for safety-critical human centered autonomous systems: A case study on Artificial Pancreas",
     "abstract": "Design-time safety guarantees for human-centered autonomous systems (HCAS) often break down in open-world deployment due to uncertain human interaction. In practice, HCAS must follow a user-personalized safety plan, with the human providing external inputs to handle out-of-distribution events. Open-world safety planning for HCAS demands modeling dynamical systems, exploring novel actions, and rapid replanning when plans are invalidated or dynamics shift. No single state-of-the-art planner meets all these needs. We introduce an LLM-based architecture that automatically generates personalized safety plans. By itself, the LLM fares poorly at producing safe usage plans, but coupling it with a safety verifierâ€”which evaluates plan safety over the planning horizon and feeds back quality scoresâ€”enables the discovery of safe plans. Moreover, fine-tuning the LLM on personalized models inferred from open-world data further enhances plan quality. We validate our approach by generating safe usage plans for artificial pancreas systems in automated insulin delivery for Type 1 Diabetes patients. Code: https://github.com/ImpactLabASU/LLMOpen",
-    "limitation": "The proposed framework effectively automates the generation of safety plans for HCAS while optimizing user burden measures using the plan size. However, in addition to safety and plan size there are several other metrics that are important for the human user which is yet to be studied.\n\nGuarantees on LLM performance: In the demonstrated plan generation technique, we enforce the LLMtoeither produce a safe plan in two iteractions of plan quality measurement or relinquish control and default to fail safe modes. Hence as such if the system is not in fail safe mode then the plan is guaranteed safe. However, this strategy may often result in unnecessary fail safe mode trigger due to failure to find a suitable plan. Formal guarantees on LLM performance with unrestricted iterations is difficult to provide.\n\nQuality of life for a safety plan: A safety plan should not restrict the human user from doing day to day activities. As seen in case of exercise for T1D, users are reluctant to exercise because of the burden of glucose management using the AP. In our paper, we did not characterize quality of life as a plan quality metric. Quantification of quality of life for a plan can have significant individual variance and needs to be studied in more detail.\n\nQuantifying back prompting overhead: Back prompting was necessary in all LLMs to obtain domain specific safety plans. Especially all LLMs seem to have amnesia of contexts and through back prompting required the human user to remind about context information previously provided in the conversation. We have not quantified the overhead of back prompting but is an important efficacy metric.",
+    "limitation": "The proposed framework effectively automates the generation of safety plans for HCAS while optimizing user burden measures using the plan size. However, in addition to safety and plan size there are several other metrics that are important for the human user which is yet to be studied.\n\nQuality of life for a safety plan: A safety plan should not restrict the human user from doing day to day activities. As seen in case of exercise for T1D, users are reluctant to exercise because of the burden of glucose management using the AP. In our paper, we did not characterize quality of life as a plan quality metric. Quantification of quality of life for a plan can have significant individual variance and needs to be studied in more detail.\n\nGuarantees on LLM performance: In the demonstrated plan generation technique, we enforce the LLMtoeither produce a safe plan in two iteractions of plan quality measurement or relinquish control and default to fail safe modes. Hence as such if the system is not in fail safe mode then the plan is guaranteed safe. However, this strategy may often result in unnecessary fail safe mode trigger due to failure to find a suitable plan. Formal guarantees on LLM performance with unrestricted iterations is difficult to provide.\n\nQuantifying back prompting overhead: Back prompting was necessary in all LLMs to obtain domain specific safety plans. Especially all LLMs seem to have amnesia of contexts and through back prompting required the human user to remind about context information previously provided in the conversation. We have not quantified the overhead of back prompting but is an important efficacy metric.",
     "segmented_text": {
       "2025.findings-emnlp.1219_s01": "The proposed framework effectively automates the generation of safety plans for HCAS while optimizing user burden measures using the plan size.",
       "2025.findings-emnlp.1219_s02": "However, in addition to safety and plan size there are several other metrics that are important for the human user which is yet to be studied.",
-      "2025.findings-emnlp.1219_s03": "Guarantees on LLM performance: In the demonstrated plan generation technique, we enforce the LLMtoeither produce a safe plan in two iteractions of plan quality measurement or relinquish control and default to fail safe modes.",
-      "2025.findings-emnlp.1219_s04": "Hence as such if the system is not in fail safe mode then the plan is guaranteed safe.",
-      "2025.findings-emnlp.1219_s05": "However, this strategy may often result in unnecessary fail safe mode trigger due to failure to find a suitable plan.",
-      "2025.findings-emnlp.1219_s06": "Formal guarantees on LLM performance with unrestricted iterations is difficult to provide.",
-      "2025.findings-emnlp.1219_s07": "Quality of life for a safety plan: A safety plan should not restrict the human user from doing day to day activities.",
-      "2025.findings-emnlp.1219_s08": "As seen in case of exercise for T1D, users are reluctant to exercise because of the burden of glucose management using the AP.",
-      "2025.findings-emnlp.1219_s09": "In our paper, we did not characterize quality of life as a plan quality metric.",
-      "2025.findings-emnlp.1219_s10": "Quantification of quality of life for a plan can have significant individual variance and needs to be studied in more detail.",
+      "2025.findings-emnlp.1219_s03": "Quality of life for a safety plan: A safety plan should not restrict the human user from doing day to day activities.",
+      "2025.findings-emnlp.1219_s04": "As seen in case of exercise for T1D, users are reluctant to exercise because of the burden of glucose management using the AP.",
+      "2025.findings-emnlp.1219_s05": "In our paper, we did not characterize quality of life as a plan quality metric.",
+      "2025.findings-emnlp.1219_s06": "Quantification of quality of life for a plan can have significant individual variance and needs to be studied in more detail.",
+      "2025.findings-emnlp.1219_s07": "Guarantees on LLM performance: In the demonstrated plan generation technique, we enforce the LLMtoeither produce a safe plan in two iteractions of plan quality measurement or relinquish control and default to fail safe modes.",
+      "2025.findings-emnlp.1219_s08": "Hence as such if the system is not in fail safe mode then the plan is guaranteed safe.",
+      "2025.findings-emnlp.1219_s09": "However, this strategy may often result in unnecessary fail safe mode trigger due to failure to find a suitable plan.",
+      "2025.findings-emnlp.1219_s10": "Formal guarantees on LLM performance with unrestricted iterations is difficult to provide.",
       "2025.findings-emnlp.1219_s11": "Quantifying back prompting overhead: Back prompting was necessary in all LLMs to obtain domain specific safety plans.",
       "2025.findings-emnlp.1219_s12": "Especially all LLMs seem to have amnesia of contexts and through back prompting required the human user to remind about context information previously provided in the conversation.",
       "2025.findings-emnlp.1219_s13": "We have not quantified the overhead of back prompting but is an important efficacy metric."
@@ -628326,10 +628326,10 @@
         "code_name": "Methodological Constraints",
         "evidence": [
           {
-            "segmented_id": "2025.findings-emnlp.1219_s05",
+            "segmented_id": "2025.findings-emnlp.1219_s09",
             "segmented": "However, this strategy may often result in unnecessary fail safe mode trigger due to failure to find a suitable plan.",
-            "highlight_start": 624,
-            "highlight_end": 717,
+            "highlight_start": 1076,
+            "highlight_end": 1169,
             "highlight_text": "may often result in unnecessary fail safe mode trigger due to failure to find a suitable plan",
             "justification": "The strict 2-iteration limit described in s03 directly causes a functional failure where the system unnecessarily triggers fail-safe modes. This is a direct consequence of their architectural design choice."
           }
@@ -628368,10 +628368,10 @@
             "justification": "The authors delegate the study of additional important metrics to future research."
           },
           {
-            "segmented_id": "2025.findings-emnlp.1219_s10",
+            "segmented_id": "2025.findings-emnlp.1219_s06",
             "segmented": "Quantification of quality of life for a plan can have significant individual variance and needs to be studied in more detail.",
-            "highlight_start": 1226,
-            "highlight_end": 1260,
+            "highlight_start": 703,
+            "highlight_end": 737,
             "highlight_text": "needs to be studied in more detail",
             "justification": "Explicit delegation of this unaddressed metric to future research."
           }
@@ -628381,10 +628381,10 @@
         "code_name": "Non-Limitation: Method Details",
         "evidence": [
           {
-            "segmented_id": "2025.findings-emnlp.1219_s03",
+            "segmented_id": "2025.findings-emnlp.1219_s07",
             "segmented": "Guarantees on LLM performance: In the demonstrated plan generation technique, we enforce the LLMtoeither produce a safe plan in two iteractions of plan quality measurement or relinquish control and default to fail safe modes.",
-            "highlight_start": 369,
-            "highlight_end": 481,
+            "highlight_start": 821,
+            "highlight_end": 933,
             "highlight_text": "enforce the LLMtoeither produce a safe plan in two iteractions of plan quality measurement or relinquish control",
             "justification": "A neutral, factual description of the specific operational rules embedded in the proposed method."
           }
@@ -628394,10 +628394,10 @@
         "code_name": "Non-Limitation: Method Strength",
         "evidence": [
           {
-            "segmented_id": "2025.findings-emnlp.1219_s04",
+            "segmented_id": "2025.findings-emnlp.1219_s08",
             "segmented": "Hence as such if the system is not in fail safe mode then the plan is guaranteed safe.",
-            "highlight_start": 528,
-            "highlight_end": 599,
+            "highlight_start": 980,
+            "highlight_end": 1051,
             "highlight_text": "if the system is not in fail safe mode then the plan is guaranteed safe",
             "justification": "The authors highlight a theoretical and structural advantage of their approach (guaranteed safety under certain conditions)."
           }
@@ -628420,10 +628420,10 @@
         "code_name": "Scope Limitation",
         "evidence": [
           {
-            "segmented_id": "2025.findings-emnlp.1219_s09",
+            "segmented_id": "2025.findings-emnlp.1219_s05",
             "segmented": "In our paper, we did not characterize quality of life as a plan quality metric.",
-            "highlight_start": 1073,
-            "highlight_end": 1134,
+            "highlight_start": 550,
+            "highlight_end": 611,
             "highlight_text": "did not characterize quality of life as a plan quality metric",
             "justification": "The authors explicitly declare a deliberate boundary regarding what metrics were excluded from their study."
           },
@@ -628441,10 +628441,10 @@
         "code_name": "Theoretical Gap",
         "evidence": [
           {
-            "segmented_id": "2025.findings-emnlp.1219_s06",
+            "segmented_id": "2025.findings-emnlp.1219_s10",
             "segmented": "Formal guarantees on LLM performance with unrestricted iterations is difficult to provide.",
-            "highlight_start": 719,
-            "highlight_end": 809,
+            "highlight_start": 1171,
+            "highlight_end": 1261,
             "highlight_text": "Formal guarantees on LLM performance with unrestricted iterations is difficult to provide.",
             "justification": "The authors acknowledge an epistemic limitation where they lack the rigorous mathematical formalization to guarantee performance without their strict iteration limits."
           }

@@ -171,6 +171,12 @@ The codebook itself went through several versions, revised annually with humans 
 
 **Maintenance plan**: The dataset is a fixed output of one coding run. No expansion is planned, but errors will be corrected if they surface.
 
+**Corrections**
+
+| Date | Change |
+|---|---|
+| Oct 2026 | Restored the PDF reading order of Limitations paragraphs in 8 papers where extraction had swapped them: `2022.emnlp-main.618`, `2023.acl-long.406`, `2023.findings-emnlp.1026`, `2024.acl-long.800`, `2025.acl-short.26`, `2025.emnlp-main.1121`, `2025.emnlp-main.1631`, `2025.findings-emnlp.1219`. In those papers `limitation` is reordered, `segmented_text` keys are renumbered to follow the corrected order, and each evidence entry's `segmented_id`, `highlight_start` and `highlight_end` are updated to match. Codes, justifications and sentence texts are unchanged. |
+
 ## Access Policy / Retention Policy / Wipeout Policy
 
 **Access Policy**: Public. Released under CC BY 4.0 in the same GitHub repository as the codebook versions and the companion human-coded dataset.
@@ -356,6 +362,10 @@ The dataset holds 74 papers from 2020 and 84 from 2021, against 6,269 from 2025.
 **Evidence spans do not always resolve against the source text**
 
 `highlight_start`, `highlight_end` and `highlight_text` are derived by parsing the model's own output, and the model occasionally returns a highlighted text that does not match the actual content at that position in the Limitations section, so the span cannot be resolved correctly. The defective-span rate is 1.47% overall (1,933 of 131,166). This does not affect the code assigned or its justification, only the character span. However, each evidence entry also carries `segmented_id` and `segmented`, which identify the sentence-level unit the span was drawn from independently of the character offsets; where a span fails to resolve, the segment it points to still can, and remains usable for checking the evidence behind a code.
+
+**Extraction can reorder or mix in text**
+
+`docling` reads two-column pages and page breaks imperfectly. Where a Limitations section crossed a column or page boundary, paragraphs were occasionally extracted out of order, and figure, table or adjacent-section text was occasionally pulled into the section. Paragraph order was audited against PDF page geometry for 109 papers flagged by an automated text-alignment check; 8 were confirmed as reordered and corrected (see Corrections above). Papers outside that audit were not checked individually, and mixed-in text has not been removed.
 
 ---
 
